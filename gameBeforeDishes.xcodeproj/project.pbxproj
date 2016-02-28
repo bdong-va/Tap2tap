@@ -18,6 +18,8 @@
 		BF7BFB7A1C52CB6B0012B29D /* gameBeforeDishesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7BFB791C52CB6B0012B29D /* gameBeforeDishesUITests.m */; };
 		BFF586321C834B8800102E6E /* gameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF586311C834B8800102E6E /* gameViewController.m */; };
 		BFF5863A1C83591200102E6E /* gameConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF586391C83591200102E6E /* gameConst.m */; };
+		D36930781C83537F00778F83 /* settingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D36930771C83537F00778F83 /* settingPageViewController.m */; };
+		D369307B1C8361AB00778F83 /* setNamesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D369307A1C8361AB00778F83 /* setNamesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,10 @@
 		BFF586311C834B8800102E6E /* gameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameViewController.m; sourceTree = "<group>"; };
 		BFF586381C83591200102E6E /* gameConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gameConst.h; path = ../gameConst.h; sourceTree = "<group>"; };
 		BFF586391C83591200102E6E /* gameConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = gameConst.m; path = ../gameConst.m; sourceTree = "<group>"; };
+		D36930761C83537F00778F83 /* settingPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingPageViewController.h; sourceTree = "<group>"; };
+		D36930771C83537F00778F83 /* settingPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingPageViewController.m; sourceTree = "<group>"; };
+		D36930791C8361AB00778F83 /* setNamesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setNamesTableViewController.h; sourceTree = "<group>"; };
+		D369307A1C8361AB00778F83 /* setNamesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = setNamesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,10 @@
 				BFF586301C834B8800102E6E /* gameViewController.h */,
 				BFF586311C834B8800102E6E /* gameViewController.m */,
 				BF7BFB5A1C52CB6B0012B29D /* Main.storyboard */,
+				D36930791C8361AB00778F83 /* setNamesTableViewController.h */,
+				D369307A1C8361AB00778F83 /* setNamesTableViewController.m */,
+				D36930761C83537F00778F83 /* settingPageViewController.h */,
+				D36930771C83537F00778F83 /* settingPageViewController.m */,
 				BF7BFB601C52CB6B0012B29D /* Assets.xcassets */,
 				BF7BFB621C52CB6B0012B29D /* LaunchScreen.storyboard */,
 				BF7BFB651C52CB6B0012B29D /* Info.plist */,
@@ -289,11 +299,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF586321C834B8800102E6E /* gameViewController.m in Sources */,
+				D36930781C83537F00778F83 /* settingPageViewController.m in Sources */,
 				BF7BFB591C52CB6A0012B29D /* ViewController.m in Sources */,
 				BF7BFB561C52CB6A0012B29D /* AppDelegate.m in Sources */,
 				BF7BFB5F1C52CB6B0012B29D /* gameBeforeDishes.xcdatamodeld in Sources */,
 				BF7BFB531C52CB6A0012B29D /* main.m in Sources */,
 				BFF5863A1C83591200102E6E /* gameConst.m in Sources */,
+				D369307B1C8361AB00778F83 /* setNamesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
