@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -46,10 +46,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="P8h-SK-HrE">
             <objects>
-                <viewController id="qaE-FI-Mdo" sceneMemberID="viewController">
+                <viewController id="qaE-FI-Mdo" customClass="gameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ReP-Gp-VKQ"/>
                         <viewControllerLayoutGuide type="bottom" id="9vN-0f-hhP"/>
@@ -58,15 +58,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGd-ua-W8N">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGd-ua-W8N" userLabel="Button1">
                                 <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                 <color key="backgroundColor" red="0.8799092173576355" green="0.96500557661056519" blue="0.96958369016647339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pressPlayerButton:" destination="qaE-FI-Mdo" eventType="touchUpInside" id="bf0-Mq-VUj"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOQ-Ks-uo2">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOQ-Ks-uo2" userLabel="Button2">
                                 <rect key="frame" x="0.0" y="586" width="414" height="150"/>
                                 <color key="backgroundColor" red="0.8799092173576355" green="0.96500557661056519" blue="0.96958369016647339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pressPlayerButton:" destination="qaE-FI-Mdo" eventType="touchUpInside" id="QVH-ch-ZcE"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="19O-ya-Ktn">
                                 <rect key="frame" x="0.0" y="179" width="414" height="406"/>
@@ -74,10 +80,30 @@
                                     <segue destination="h83-r6-p0H" kind="embed" id="XeG-XU-ISX"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5P-yw-PXo" userLabel="Button3">
+                                <rect key="frame" x="274" y="88" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pressPlayerButton:" destination="qaE-FI-Mdo" eventType="touchUpInside" id="hWj-Xy-36Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJ8-l7-QHP" userLabel="Button4">
+                                <rect key="frame" x="274" y="646" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pressPlayerButton:" destination="qaE-FI-Mdo" eventType="touchUpInside" id="G2g-Oh-FPD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="button1" destination="zGd-ua-W8N" id="fnw-aA-bxe"/>
+                        <outlet property="button2" destination="aOQ-Ks-uo2" id="TrG-rw-wh6"/>
+                        <outlet property="button3" destination="l5P-yw-PXo" id="eZA-Up-w09"/>
+                        <outlet property="button4" destination="OJ8-l7-QHP" id="Iqw-YF-I2V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ZE-xc-jvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,7 +174,7 @@
                                             <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mJR-2j-S7i" id="Ekg-J4-8y7">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </tableViewCellContentView>
                                         </tableViewCell>
