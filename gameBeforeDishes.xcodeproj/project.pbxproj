@@ -16,6 +16,8 @@
 		BF7BFB641C52CB6B0012B29D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7BFB621C52CB6B0012B29D /* LaunchScreen.storyboard */; };
 		BF7BFB6F1C52CB6B0012B29D /* gameBeforeDishesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7BFB6E1C52CB6B0012B29D /* gameBeforeDishesTests.m */; };
 		BF7BFB7A1C52CB6B0012B29D /* gameBeforeDishesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7BFB791C52CB6B0012B29D /* gameBeforeDishesUITests.m */; };
+		BFF586321C834B8800102E6E /* gameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF586311C834B8800102E6E /* gameViewController.m */; };
+		BFF5863A1C83591200102E6E /* gameConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF586391C83591200102E6E /* gameConst.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		BF7BFB751C52CB6B0012B29D /* gameBeforeDishesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gameBeforeDishesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7BFB791C52CB6B0012B29D /* gameBeforeDishesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gameBeforeDishesUITests.m; sourceTree = "<group>"; };
 		BF7BFB7B1C52CB6B0012B29D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF586301C834B8800102E6E /* gameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameViewController.h; sourceTree = "<group>"; };
+		BFF586311C834B8800102E6E /* gameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameViewController.m; sourceTree = "<group>"; };
+		BFF586381C83591200102E6E /* gameConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gameConst.h; path = ../gameConst.h; sourceTree = "<group>"; };
+		BFF586391C83591200102E6E /* gameConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = gameConst.m; path = ../gameConst.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +109,14 @@
 		BF7BFB501C52CB6A0012B29D /* gameBeforeDishes */ = {
 			isa = PBXGroup;
 			children = (
+				BFF586381C83591200102E6E /* gameConst.h */,
+				BFF586391C83591200102E6E /* gameConst.m */,
 				BF7BFB541C52CB6A0012B29D /* AppDelegate.h */,
 				BF7BFB551C52CB6A0012B29D /* AppDelegate.m */,
 				BF7BFB571C52CB6A0012B29D /* ViewController.h */,
 				BF7BFB581C52CB6A0012B29D /* ViewController.m */,
+				BFF586301C834B8800102E6E /* gameViewController.h */,
+				BFF586311C834B8800102E6E /* gameViewController.m */,
 				BF7BFB5A1C52CB6B0012B29D /* Main.storyboard */,
 				BF7BFB601C52CB6B0012B29D /* Assets.xcassets */,
 				BF7BFB621C52CB6B0012B29D /* LaunchScreen.storyboard */,
@@ -205,6 +215,11 @@
 		BF7BFB461C52CB6A0012B29D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+					button1,
+					button2,
+				);
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = bdong;
 				TargetAttributes = {
@@ -273,10 +288,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF586321C834B8800102E6E /* gameViewController.m in Sources */,
 				BF7BFB591C52CB6A0012B29D /* ViewController.m in Sources */,
 				BF7BFB561C52CB6A0012B29D /* AppDelegate.m in Sources */,
 				BF7BFB5F1C52CB6B0012B29D /* gameBeforeDishes.xcdatamodeld in Sources */,
 				BF7BFB531C52CB6A0012B29D /* main.m in Sources */,
+				BFF5863A1C83591200102E6E /* gameConst.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +519,7 @@
 				BF7BFB801C52CB6B0012B29D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF7BFB811C52CB6B0012B29D /* Build configuration list for PBXNativeTarget "gameBeforeDishesTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +528,7 @@
 				BF7BFB831C52CB6B0012B29D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF7BFB841C52CB6B0012B29D /* Build configuration list for PBXNativeTarget "gameBeforeDishesUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +537,7 @@
 				BF7BFB861C52CB6B0012B29D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
