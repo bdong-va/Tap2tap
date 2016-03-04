@@ -11,6 +11,7 @@
 
 UIColor* winColor;
 UIColor* lostColor;
+UIColor* normalColor;
 gameConst* constString;
 @implementation gameViewController
 
@@ -20,13 +21,24 @@ gameConst* constString;
     self.buttonList = [NSMutableArray arrayWithObjects:_button1,_button2,_button3,_button4, nil];
     winColor = [UIColor greenColor];
     lostColor= [UIColor redColor];
+    normalColor = [UIColor colorWithRed:0.6 green:0.95 blue:1 alpha:1];
     constString = [[gameConst alloc] init];
+    _button1.transform = CGAffineTransformMakeRotation(M_PI);
+
+    _button3.hidden = true;
+    _button4.hidden = true;
+    
     
 }
 
 -(IBAction)pressPlayerButton:(id)sender
 {
     [self setButtonsStatus:sender isItWin:true];
+    [NSTimer scheduledTimerWithTimeInterval:2.0
+                                     target:self
+                                   selector:@selector(resetButtonStatus)
+                                   userInfo:nil
+                                    repeats:NO];
 }
 
 
@@ -53,6 +65,16 @@ gameConst* constString;
         }
     }
     
+}
+
+-(void)resetButtonStatus
+{
+    for (UIButton *button  in _buttonList) {
+            //TODO set back to button's name
+            [button setTitle:@" " forState:UIControlStateNormal];
+            [button setBackgroundColor:normalColor];
+    }
+
 }
 
 

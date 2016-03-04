@@ -60,7 +60,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGd-ua-W8N" userLabel="Button1">
                                 <rect key="frame" x="0.0" y="28" width="414" height="150"/>
-                                <color key="backgroundColor" red="0.8799092173576355" green="0.96500557661056519" blue="0.96958369016647339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="pressPlayerButton:" destination="qaE-FI-Mdo" eventType="touchUpInside" id="bf0-Mq-VUj"/>
