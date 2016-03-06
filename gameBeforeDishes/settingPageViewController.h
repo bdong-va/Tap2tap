@@ -11,4 +11,5 @@
 
 @interface settingPageViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic) NSArray* tableOptions;
 @end

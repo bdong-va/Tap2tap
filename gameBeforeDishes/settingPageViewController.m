@@ -9,20 +9,25 @@
 #import "settingPageViewController.h"
 
 @implementation settingPageViewController
+@synthesize tableOptions = _tableOptions;
 
-- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"adsfasdf");
+- (NSArray *) tableOptions
+{
+    if (!_tableOptions)
+        _tableOptions = @[@"Number of players",@"Set player names",@"Shuffle games",@"Set game list"];
+    return _tableOptions;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return( 1 );
+    return(1);
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return( 10 );
+    return [self.tableOptions count];
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -31,32 +36,12 @@
                                                               reuseIdentifier: @"Cell" ];
 
     
-    UILabel *numPlayersLabel = [[UILabel alloc] init];
-    numPlayersLabel.text = @"2";
+    
+    //UILabel *numPlayersLabel = [[UILabel alloc] init];
+    //numPlayersLabel.text = @"2";
 
     
-    switch (indexPath.row) {
-        case 0:
-            cellToReturn.textLabel.text = @"Number of players";
-            cellToReturn.accessoryView = numPlayersLabel;
-            
-            break;
-        case 1:
-            cellToReturn.textLabel.text = @"Set player names";
-            cellToReturn.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            break;
-        case 2:
-            cellToReturn.textLabel.text = @"Shuffle games";
-            cellToReturn.accessoryType = UITableViewCellAccessoryCheckmark;
-            break;
-        case 3:
-            cellToReturn.textLabel.text = @"Set game list";
-            cellToReturn.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            break;
-        default:
-            break;
-    }
-    //cellToReturn.textLabel.text = [ NSString stringWithFormat: @"%ld", indexPath.row];
+    cellToReturn.textLabel.text = [ NSString stringWithFormat: @"%ld", indexPath.row];
 
     //cellToReturn.detailTextLabel.text = [ NSString stringWithFormat: @"%ld", indexPath.row];
     
