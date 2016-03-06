@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 
 @interface gameConst : NSObject
 
@@ -14,6 +16,12 @@
 @property NSMutableArray* PositiveLostText;
 @property NSMutableArray* NegativeWinText;
 @property NSMutableArray* NegativeLostText;
+@property NSDictionary* ColorList;
 
+- (NSString*)getRandomObjectFromArray:(NSMutableArray*) theArray;
+- (NSString*)getRandomKeyfromDict:(NSDictionary*) theDict;
+- (NSString*)getRandomValuefromDict:(NSDictionary*) theDict;
+- (NSString *)convertColorToString :(UIColor *)colorname;
+-(UIColor *)getColorFromDict :(NSDictionary *)dicname :(NSString *)keyname;
 
 @end

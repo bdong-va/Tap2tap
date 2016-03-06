@@ -8,11 +8,13 @@
 
 #import "gameViewController.h"
 #import "gameConst.h"
+#import "QuizViewController.h"
 
 UIColor* winColor;
 UIColor* lostColor;
 UIColor* normalColor;
 gameConst* constString;
+bool goodTime;
 @implementation gameViewController
 
 - (void)viewDidLoad {
@@ -24,16 +26,27 @@ gameConst* constString;
     normalColor = [UIColor colorWithRed:0.6 green:0.95 blue:1 alpha:1];
     constString = [[gameConst alloc] init];
     _button1.transform = CGAffineTransformMakeRotation(M_PI);
-
+    goodTime = false;
+//    _button1.backgroundColor = [constString getColorFromDict:constString.ColorList :@"BLACK"];
     _button3.hidden = true;
     _button4.hidden = true;
     
     
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSString * segueName = segue.identifier;
+    if ([segueName isEqualToString: @"quiz_embed"]) {
+        QuizViewController * childViewController = (QuizViewController *) [segue destinationViewController];
+        goodTime = childViewController.GoodTimeToPressButton;
+        // do something with the AlertView's subviews here...
+    }
+}
+
 -(IBAction)pressPlayerButton:(id)sender
 {
-    [self setButtonsStatus:sender isItWin:true];
+    [self setButtonsStatus:sender isItWin:goodTime];
     [NSTimer scheduledTimerWithTimeInterval:2.0
                                      target:self
                                    selector:@selector(resetButtonStatus)
@@ -64,6 +77,7 @@ gameConst* constString;
             }
         }
     }
+    [self showViewA];
     
 }
 
@@ -74,9 +88,25 @@ gameConst* constString;
             [button setTitle:@" " forState:UIControlStateNormal];
             [button setBackgroundColor:normalColor];
     }
+    [self showViewB];
+}
+
+-(void)showViewA
+{
+//    self.containerViewA.alpha = 1;
+    self.containerViewA.hidden = false;
+//    self.containerViewB.alpha = 0;
+    self.containerViewB.hidden = true;
 
 }
 
+-(void)showViewB
+{
+//    self.containerViewA.alpha = 0;
+    self.containerViewA.hidden = true;
+    self.containerViewB.hidden = false;
 
+//    self.containerViewB.alpha = 1;
+}
 
 @end

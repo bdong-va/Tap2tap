@@ -22,4 +22,7 @@
 
 @property NSMutableArray* buttonList;
 
+@property IBOutlet UIView *containerViewA;
+@property IBOutlet UIView *containerViewB;
+
 @end

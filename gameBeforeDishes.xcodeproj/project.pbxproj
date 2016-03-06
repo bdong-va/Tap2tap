@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF03DA931C8C8C02009C184F /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF03DA921C8C8C02009C184F /* QuizViewController.m */; };
 		BF7BFB531C52CB6A0012B29D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7BFB521C52CB6A0012B29D /* main.m */; };
 		BF7BFB561C52CB6A0012B29D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7BFB551C52CB6A0012B29D /* AppDelegate.m */; };
 		BF7BFB591C52CB6A0012B29D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7BFB581C52CB6A0012B29D /* ViewController.m */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF03DA911C8C8C02009C184F /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
+		BF03DA921C8C8C02009C184F /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
 		BF7BFB4E1C52CB6A0012B29D /* gameBeforeDishes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gameBeforeDishes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7BFB521C52CB6A0012B29D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF7BFB541C52CB6A0012B29D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 			children = (
 				BFF586381C83591200102E6E /* gameConst.h */,
 				BFF586391C83591200102E6E /* gameConst.m */,
+				BF03DA911C8C8C02009C184F /* QuizViewController.h */,
+				BF03DA921C8C8C02009C184F /* QuizViewController.m */,
 				BF7BFB541C52CB6A0012B29D /* AppDelegate.h */,
 				BF7BFB551C52CB6A0012B29D /* AppDelegate.m */,
 				BF7BFB571C52CB6A0012B29D /* ViewController.h */,
@@ -300,6 +305,7 @@
 			files = (
 				BFF586321C834B8800102E6E /* gameViewController.m in Sources */,
 				D36930781C83537F00778F83 /* settingPageViewController.m in Sources */,
+				BF03DA931C8C8C02009C184F /* QuizViewController.m in Sources */,
 				BF7BFB591C52CB6A0012B29D /* ViewController.m in Sources */,
 				BF7BFB561C52CB6A0012B29D /* AppDelegate.m in Sources */,
 				BF7BFB5F1C52CB6B0012B29D /* gameBeforeDishes.xcdatamodeld in Sources */,

@@ -45,6 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="439" y="-19"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="P8h-SK-HrE">
@@ -94,6 +95,12 @@
                                     <action selector="pressPlayerButton:" destination="qaE-FI-Mdo" eventType="touchUpInside" id="G2g-Oh-FPD"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nFi-9f-eGs">
+                                <rect key="frame" x="0.0" y="179" width="414" height="406"/>
+                                <connections>
+                                    <segue destination="5d2-FM-cdh" kind="embed" identifier="quiz_embed" id="JdX-m0-ajh"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -103,11 +110,13 @@
                         <outlet property="button2" destination="aOQ-Ks-uo2" id="TrG-rw-wh6"/>
                         <outlet property="button3" destination="l5P-yw-PXo" id="eZA-Up-w09"/>
                         <outlet property="button4" destination="OJ8-l7-QHP" id="Iqw-YF-I2V"/>
+                        <outlet property="containerViewA" destination="19O-ya-Ktn" id="8ns-OT-XZz"/>
+                        <outlet property="containerViewB" destination="nFi-9f-eGs" id="Bs0-Rh-R1t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ZE-xc-jvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1157" y="5"/>
+            <point key="canvasLocation" x="1157" y="-143"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UUX-w4-9QC">
@@ -135,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncc-Jw-9aV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="546" y="1426"/>
+            <point key="canvasLocation" x="402" y="1270"/>
         </scene>
         <!--Setting Page View Controller-->
         <scene sceneID="RJ7-9g-dPi">
@@ -195,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0t-6m-h3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1157" y="822"/>
+            <point key="canvasLocation" x="1157" y="828"/>
         </scene>
         <!--Set Names Table View Controller-->
         <scene sceneID="SVC-ja-VqT">
@@ -236,12 +245,70 @@
                     <view key="view" contentMode="scaleToFill" id="bww-uA-duJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="406"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibe-j9-vTr">
+                                <rect key="frame" x="186" y="192" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPa-zH-wSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="-127"/>
+            <point key="canvasLocation" x="1752" y="-255"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="x82-b6-ki1">
+            <objects>
+                <viewController id="5d2-FM-cdh" customClass="QuizViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d1W-D5-ZSa"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Ac-3w-vh2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vOe-0l-HiA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="406"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NE-FU-Bcp">
+                                <rect key="frame" x="186" y="228" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zau-VU-Bcx">
+                                <rect key="frame" x="186" y="304" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOf-sJ-X12">
+                                <rect key="frame" x="186" y="69" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJF-uW-pgF">
+                                <rect key="frame" x="186" y="158" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="AnswerDown" destination="Zau-VU-Bcx" id="UKr-xO-KWe"/>
+                        <outlet property="AnswerUp" destination="KOf-sJ-X12" id="2te-go-KIg"/>
+                        <outlet property="QuestionDown" destination="9NE-FU-Bcp" id="yyz-78-8hB"/>
+                        <outlet property="QuestionUp" destination="GJF-uW-pgF" id="vLq-cD-VvJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkd-i6-bBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752" y="188"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
