@@ -16,7 +16,10 @@
 - (IBAction)stepperClicked:(id)sender;
 - (IBAction)shuffleSwitch:(id)sender;
 @property (weak, nonatomic) IBOutlet UIStepper *stepper;
+- (IBAction)sliderSlid:(id)sender;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
 
+@property (weak, nonatomic) IBOutlet UILabel *gameSpeedLabel;
 @property (weak, nonatomic) IBOutlet UISwitch *shuffleOrderSwitch;
 @end
 

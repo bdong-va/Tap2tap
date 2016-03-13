@@ -19,6 +19,7 @@ bool goodTime;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
     self.buttonList = [NSMutableArray arrayWithObjects:_button1,_button2,_button3,_button4, nil];
     winColor = [UIColor greenColor];

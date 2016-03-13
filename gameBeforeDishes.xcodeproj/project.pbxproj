@@ -19,6 +19,7 @@
 		BFB93F121C8CA10300B69F71 /* gameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB93F111C8CA10300B69F71 /* gameViewController.m */; };
 		BFB93F151C8CA10E00B69F71 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB93F141C8CA10E00B69F71 /* QuizViewController.m */; };
 		BFB93F181C8CA13400B69F71 /* gameConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB93F171C8CA13400B69F71 /* gameConst.m */; };
+		D32899FF1C952A9E005A3177 /* PointChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D32899FE1C952A9E005A3177 /* PointChooserViewController.m */; };
 		D37A81141C8C888A00560EDE /* GameListUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D37A81131C8C888A00560EDE /* GameListUITableViewController.m */; };
 		D390425C1C879D6C00474670 /* CustomGameMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D390425B1C879D6C00474670 /* CustomGameMenuTableViewController.m */; };
 		D39042621C87AA5400474670 /* PlayersNamesUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D39042611C87AA5400474670 /* PlayersNamesUITableViewController.m */; };
@@ -65,6 +66,8 @@
 		BFB93F141C8CA10E00B69F71 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
 		BFB93F161C8CA13400B69F71 /* gameConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameConst.h; sourceTree = "<group>"; };
 		BFB93F171C8CA13400B69F71 /* gameConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameConst.m; sourceTree = "<group>"; };
+		D32899FD1C952A9E005A3177 /* PointChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointChooserViewController.h; sourceTree = "<group>"; };
+		D32899FE1C952A9E005A3177 /* PointChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointChooserViewController.m; sourceTree = "<group>"; };
 		D37A81121C8C888A00560EDE /* GameListUITableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameListUITableViewController.h; sourceTree = "<group>"; };
 		D37A81131C8C888A00560EDE /* GameListUITableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameListUITableViewController.m; sourceTree = "<group>"; };
 		D390425A1C879D6C00474670 /* CustomGameMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomGameMenuTableViewController.h; path = ../CustomGameMenuTableViewController.h; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				BF7BFB571C52CB6A0012B29D /* ViewController.h */,
 				BF7BFB581C52CB6A0012B29D /* ViewController.m */,
 				BF7BFB5A1C52CB6B0012B29D /* Main.storyboard */,
+				D32899FD1C952A9E005A3177 /* PointChooserViewController.h */,
+				D32899FE1C952A9E005A3177 /* PointChooserViewController.m */,
 				BF7BFB601C52CB6B0012B29D /* Assets.xcassets */,
 				BF7BFB621C52CB6B0012B29D /* LaunchScreen.storyboard */,
 				BF7BFB651C52CB6B0012B29D /* Info.plist */,
@@ -308,6 +313,7 @@
 				BFB93F151C8CA10E00B69F71 /* QuizViewController.m in Sources */,
 				BFB93F181C8CA13400B69F71 /* gameConst.m in Sources */,
 				BF7BFB561C52CB6A0012B29D /* AppDelegate.m in Sources */,
+				D32899FF1C952A9E005A3177 /* PointChooserViewController.m in Sources */,
 				D37A81141C8C888A00560EDE /* GameListUITableViewController.m in Sources */,
 				D390425C1C879D6C00474670 /* CustomGameMenuTableViewController.m in Sources */,
 				D39042621C87AA5400474670 /* PlayersNamesUITableViewController.m in Sources */,

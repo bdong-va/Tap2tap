@@ -70,7 +70,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0 ){
-        return 4;
+        return 6;
     }else{
         return 1;
     }
@@ -134,4 +134,19 @@
 */
 
 
+- (IBAction)sliderSlid:(id)sender {
+    if (_slider.value*100 < 10.0){
+        _gameSpeedLabel.text = @"Game Speed: Molasses";
+    }else if (_slider.value*100 < 40.0){
+        _gameSpeedLabel.text = @"Game Speed: Slow";
+    }else if(_slider.value*100 < 70.0){
+        _gameSpeedLabel.text = @"Game Speed: Medium";
+    }else if (_slider.value*100 <90.0){
+        _gameSpeedLabel.text = @"Game Speed: Fast";
+    }else{
+        _gameSpeedLabel.text = @"Game Speed: Good luck";
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setFloat:_slider.value*100 forKey:@"gameSpeed"];
+}
 @end

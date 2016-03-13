@@ -18,7 +18,7 @@ NSInteger numberOfPlayers;
 NSArray* namesOfPlayers;
 BOOL shuffleGameOrder;
 NSArray* listOfSelectedMiniGames;
-
+float gameSpeed;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,12 +27,14 @@ NSArray* listOfSelectedMiniGames;
     namesOfPlayers = @[@"Player 1", @"Player 2"];
     shuffleGameOrder = NO;
     listOfSelectedMiniGames = @[@"game1", @"game2", @"game3"];
+    gameSpeed = 50.0;
   
     
     [[NSUserDefaults standardUserDefaults] setObject:namesOfPlayers forKey:@"namesOfPlayers"];
     [[NSUserDefaults standardUserDefaults] setInteger:numberOfPlayers forKey:@"numberOfPlayers"];
     [[NSUserDefaults standardUserDefaults] setObject:listOfSelectedMiniGames forKey:@"listOfSelectedMiniGames"];
     [[NSUserDefaults standardUserDefaults] setBool:shuffleGameOrder forKey:@"shuffleGameOrder"];
+    [[NSUserDefaults standardUserDefaults] setFloat:gameSpeed forKey:@"gameSpeed"];
     
     [[NSUserDefaults standardUserDefaults] synchronize];
     
