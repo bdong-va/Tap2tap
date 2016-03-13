@@ -95,7 +95,7 @@
         _gameSpeedLabel.text = @"Game Speed: Good luck";
     }
     
-    [[NSUserDefaults standardUserDefaults] setFloat:_slider.value*100 forKey:@"gameSpeed"];
+    [[NSUserDefaults standardUserDefaults] setFloat:_slider.value forKey:@"gameSpeed"];
 }
 - (IBAction)pointStepperClicked:(id)sender {
     _pointsLabel.text = [NSMutableString stringWithFormat:@"Points to Win Game: %ld", (NSInteger) _pointStepper.value];
