@@ -23,13 +23,15 @@
     _QuestionDown.textAlignment = NSTextAlignmentCenter;
     _AnswerUp.textAlignment = NSTextAlignmentCenter;
     _AnswerDown.textAlignment = NSTextAlignmentCenter;
+    
+    [_threadProgressView1 setTransform:CGAffineTransformMakeRotation(-M_PI)];
 
     _GoodTimeToPressButton = true;
     [_QuestionUp setTransform:CGAffineTransformMakeRotation(-M_PI)];
     [_AnswerUp setTransform:CGAffineTransformMakeRotation(-M_PI)];
     puzzles = [[gameConst alloc] init];
     [self generatePuzzle];
-    [NSTimer scheduledTimerWithTimeInterval:5.0
+    [NSTimer scheduledTimerWithTimeInterval:1.5
                                      target:self
                                    selector:@selector(generatePuzzle)
                                    userInfo:nil
@@ -51,7 +53,9 @@
 
 - (void)generatePuzzle
 {
+    [self animateProgressView2];
     [self createNewPuzzlewith:[puzzles randomBoolWithYesPercentage:30]];
+    
 }
 
 - (void)createNewPuzzlewith:(bool)isCorrect
@@ -79,5 +83,33 @@
 - (BOOL)isGoodTime
 {
     return _GoodTimeToPressButton;
+}
+
+-(void)updateProgressBar
+{
+    if(_Time >= 1.5f)
+    {
+        //Invalidate timer when time reaches 0
+        [_Timer invalidate];
+    }
+    else
+    {
+        _Time += 0.05;
+        _threadProgressView1.progress = (1.5 - _Time)/1.5;
+        _threadProgressView2.progress = (1.5 - _Time)/1.5;
+    }
+}
+
+-(void)animateProgressView2
+{
+    [_Timer invalidate];
+    _threadProgressView1.progress = 1.0;
+    _threadProgressView2.progress = 1.0;
+    _Time = 0.1;
+    _Timer = [NSTimer scheduledTimerWithTimeInterval: 0.05f
+                                             target: self
+                                           selector: @selector(updateProgressBar)
+                                           userInfo: nil
+                                            repeats: YES];
 }
 @end

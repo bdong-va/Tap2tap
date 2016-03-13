@@ -16,6 +16,9 @@
 		BF7BFB641C52CB6B0012B29D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7BFB621C52CB6B0012B29D /* LaunchScreen.storyboard */; };
 		BF7BFB6F1C52CB6B0012B29D /* gameBeforeDishesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7BFB6E1C52CB6B0012B29D /* gameBeforeDishesTests.m */; };
 		BF7BFB7A1C52CB6B0012B29D /* gameBeforeDishesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7BFB791C52CB6B0012B29D /* gameBeforeDishesUITests.m */; };
+		BFA5D16F1C95B35F006822A7 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA5D16D1C95B35F006822A7 /* Setting.storyboard */; };
+		BFA5D1711C95B37F006822A7 /* Purchase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA5D1701C95B37F006822A7 /* Purchase.storyboard */; };
+		BFA5D1741C95B3B4006822A7 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA5D1721C95B3B4006822A7 /* Game.storyboard */; };
 		BFB93F121C8CA10300B69F71 /* gameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB93F111C8CA10300B69F71 /* gameViewController.m */; };
 		BFB93F151C8CA10E00B69F71 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB93F141C8CA10E00B69F71 /* QuizViewController.m */; };
 		BFB93F181C8CA13400B69F71 /* gameConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB93F171C8CA13400B69F71 /* gameConst.m */; };
@@ -60,6 +63,9 @@
 		BF7BFB751C52CB6B0012B29D /* gameBeforeDishesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gameBeforeDishesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7BFB791C52CB6B0012B29D /* gameBeforeDishesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gameBeforeDishesUITests.m; sourceTree = "<group>"; };
 		BF7BFB7B1C52CB6B0012B29D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFA5D16E1C95B35F006822A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Setting.storyboard; sourceTree = "<group>"; };
+		BFA5D1701C95B37F006822A7 /* Purchase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Purchase.storyboard; sourceTree = "<group>"; };
+		BFA5D1731C95B3B4006822A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Game.storyboard; sourceTree = "<group>"; };
 		BFB93F101C8CA10300B69F71 /* gameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameViewController.h; sourceTree = "<group>"; };
 		BFB93F111C8CA10300B69F71 /* gameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameViewController.m; sourceTree = "<group>"; };
 		BFB93F131C8CA10E00B69F71 /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
@@ -141,6 +147,9 @@
 				BF7BFB571C52CB6A0012B29D /* ViewController.h */,
 				BF7BFB581C52CB6A0012B29D /* ViewController.m */,
 				BF7BFB5A1C52CB6B0012B29D /* Main.storyboard */,
+				BFA5D1721C95B3B4006822A7 /* Game.storyboard */,
+				BFA5D1701C95B37F006822A7 /* Purchase.storyboard */,
+				BFA5D16D1C95B35F006822A7 /* Setting.storyboard */,
 				D32899FD1C952A9E005A3177 /* PointChooserViewController.h */,
 				D32899FE1C952A9E005A3177 /* PointChooserViewController.m */,
 				BF7BFB601C52CB6B0012B29D /* Assets.xcassets */,
@@ -281,9 +290,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFA5D1741C95B3B4006822A7 /* Game.storyboard in Resources */,
 				BF7BFB641C52CB6B0012B29D /* LaunchScreen.storyboard in Resources */,
+				BFA5D1711C95B37F006822A7 /* Purchase.storyboard in Resources */,
 				BF7BFB611C52CB6B0012B29D /* Assets.xcassets in Resources */,
 				BF7BFB5C1C52CB6B0012B29D /* Main.storyboard in Resources */,
+				BFA5D16F1C95B35F006822A7 /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +380,22 @@
 				BF7BFB631C52CB6B0012B29D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BFA5D16D1C95B35F006822A7 /* Setting.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFA5D16E1C95B35F006822A7 /* Base */,
+			);
+			name = Setting.storyboard;
+			sourceTree = "<group>";
+		};
+		BFA5D1721C95B3B4006822A7 /* Game.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFA5D1731C95B3B4006822A7 /* Base */,
+			);
+			name = Game.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
