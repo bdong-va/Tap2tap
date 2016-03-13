@@ -22,8 +22,8 @@ QuizViewController* quizController;
     self.navigationController.navigationBar.hidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
     self.buttonList = [NSMutableArray arrayWithObjects:_button1,_button2,_button3,_button4, nil];
-    winColor = [UIColor greenColor];
-    lostColor= [UIColor redColor];
+    winColor = [UIColor colorWithRed:0.38 green:1 blue:0.412 alpha:1];
+    lostColor= [UIColor colorWithRed:1 green:0.412 blue:0.38 alpha:1];
     normalColor = [UIColor colorWithRed:0.6 green:0.95 blue:1 alpha:1];
     constString = [[gameConst alloc] init];
     _button1.transform = CGAffineTransformMakeRotation(M_PI);
