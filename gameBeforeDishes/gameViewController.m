@@ -13,6 +13,7 @@
 UIColor* winColor;
 UIColor* lostColor;
 UIColor* normalColor;
+
 gameConst* constString;
 QuizViewController* quizController;
 @implementation gameViewController
@@ -22,11 +23,21 @@ QuizViewController* quizController;
     self.navigationController.navigationBar.hidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
     self.buttonList = [NSMutableArray arrayWithObjects:_button1,_button2,_button3,_button4, nil];
+    self.scoreLabelList = [NSMutableArray arrayWithObjects:_ScoreLabel1,_ScoreLabel2,_ScoreLabel3,_ScoreLabel4, nil];
+    self.scoreList = [NSMutableArray arrayWithCapacity:4];
+    self.scoreList[0]=@0;//
+    self.scoreList[1]=@0;//OBJECTIVE C IS ABSOLUTE GARBAGE
+    self.scoreList[2]=@0;//I SPENT OVER AN HOUR TRYING TO GET A BASIC INT ARRAY WORKING
+    self.scoreList[3]=@0;//THIS IS WHAT I'M SETTLING WITH
+    
+    [self updateScoreLabels];
+    
     winColor = [UIColor colorWithRed:0.38 green:1 blue:0.412 alpha:1];
     lostColor= [UIColor colorWithRed:1 green:0.412 blue:0.38 alpha:1];
     normalColor = [UIColor colorWithRed:0.6 green:0.95 blue:1 alpha:1];
     constString = [[gameConst alloc] init];
     _button1.transform = CGAffineTransformMakeRotation(M_PI);
+    _ScoreLabel1.transform = CGAffineTransformMakeRotation(M_PI);
 //    _button1.backgroundColor = [constString getColorFromDict:constString.ColorList :@"BLACK"];
     _button3.hidden = true;
     _button4.hidden = true;
@@ -56,9 +67,14 @@ QuizViewController* quizController;
 
 - (void)setButtonsStatus:(UIButton*)pressedButton isItWin:(BOOL)isGoodTimeToPress
 {
+    int arrayIndex = [_buttonList indexOfObject:pressedButton];
     if (isGoodTimeToPress) {
         [pressedButton setBackgroundColor:winColor];
         [pressedButton setTitle:[constString.PositiveWinText objectAtIndex:arc4random() % [constString.PositiveWinText count]] forState:UIControlStateNormal];
+        int value = [_scoreList[arrayIndex] integerValue];
+        [self.scoreList replaceObjectAtIndex:arrayIndex withObject:[NSNumber numberWithInt:value+1]];
+        UILabel* thisLabel = self.scoreLabelList[arrayIndex];
+        thisLabel.text = [NSString stringWithFormat: @"%@", _scoreList[arrayIndex]];
         for (UIButton *button  in _buttonList) {
             if (button != pressedButton) {
                 [button setTitle:[constString.NegativeLostText objectAtIndex:arc4random() % [constString.NegativeLostText count]] forState:UIControlStateNormal];
@@ -68,6 +84,9 @@ QuizViewController* quizController;
     }else {
         [pressedButton setBackgroundColor:lostColor];
         [pressedButton setTitle:[constString.PositiveLostText objectAtIndex:arc4random() % [constString.PositiveLostText count]] forState:UIControlStateNormal];
+        int value = [_scoreList[arrayIndex] integerValue];
+        [self.scoreList replaceObjectAtIndex:arrayIndex withObject:[NSNumber numberWithInt:value-1]];
+        [self updateScoreLabels];
         for (UIButton *button  in _buttonList) {
             if (button != pressedButton) {
                 [button setTitle:[constString.NegativeWinText objectAtIndex:arc4random() % [constString.NegativeWinText count]] forState:UIControlStateNormal];
@@ -85,6 +104,16 @@ QuizViewController* quizController;
             //TODO set back to button's name
             [button setTitle:@" " forState:UIControlStateNormal];
             [button setBackgroundColor:normalColor];
+    }
+}
+
+-(void)updateScoreLabels
+{
+    int index = 0;
+    for (UILabel *label in _scoreLabelList)
+    {
+        label.text = [NSString stringWithFormat: @"%@", _scoreList[index]];
+        index ++;
     }
 }
 
