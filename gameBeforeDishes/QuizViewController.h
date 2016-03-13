@@ -17,6 +17,8 @@
 
 - (void)setQuestion:(NSString*)theQuestion;
 - (void)setAnswer:(NSString*)theAnswer;
+- (BOOL)isGoodTime;
+
 
 
 

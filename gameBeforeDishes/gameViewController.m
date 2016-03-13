@@ -14,7 +14,7 @@ UIColor* winColor;
 UIColor* lostColor;
 UIColor* normalColor;
 gameConst* constString;
-bool goodTime;
+QuizViewController* quizController;
 @implementation gameViewController
 
 - (void)viewDidLoad {
@@ -27,10 +27,10 @@ bool goodTime;
     normalColor = [UIColor colorWithRed:0.6 green:0.95 blue:1 alpha:1];
     constString = [[gameConst alloc] init];
     _button1.transform = CGAffineTransformMakeRotation(M_PI);
-    goodTime = false;
 //    _button1.backgroundColor = [constString getColorFromDict:constString.ColorList :@"BLACK"];
     _button3.hidden = true;
     _button4.hidden = true;
+    [self showViewB];
     
     
 }
@@ -39,15 +39,13 @@ bool goodTime;
 {
     NSString * segueName = segue.identifier;
     if ([segueName isEqualToString: @"quiz_embed"]) {
-        QuizViewController * childViewController = (QuizViewController *) [segue destinationViewController];
-        goodTime = childViewController.GoodTimeToPressButton;
-        // do something with the AlertView's subviews here...
+        quizController = (QuizViewController *) [segue destinationViewController];
     }
 }
 
 -(IBAction)pressPlayerButton:(id)sender
 {
-    [self setButtonsStatus:sender isItWin:goodTime];
+    [self setButtonsStatus:sender isItWin:[quizController isGoodTime]];
     [NSTimer scheduledTimerWithTimeInterval:2.0
                                      target:self
                                    selector:@selector(resetButtonStatus)
@@ -78,7 +76,6 @@ bool goodTime;
             }
         }
     }
-    [self showViewA];
     
 }
 
@@ -89,7 +86,6 @@ bool goodTime;
             [button setTitle:@" " forState:UIControlStateNormal];
             [button setBackgroundColor:normalColor];
     }
-    [self showViewB];
 }
 
 -(void)showViewA

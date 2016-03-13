@@ -25,6 +25,12 @@
                            @"RED": [self convertColorToString: [UIColor redColor]],
                            @"BLACK": [self convertColorToString: [UIColor blackColor]],
                            };
+        self.capitalAndState = @{
+                                 @"Beijing":@"China",
+                                 @"Ottawa":@"Canada",
+                                 @"London":@"UK",
+                                 
+                                 };
     }
     
     return self;
@@ -45,7 +51,10 @@
     NSArray *theValues = [theDict allValues];
     return [self getRandomObjectFromArray:[NSMutableArray arrayWithArray:theValues]];
 }
-
+- (NSString*)getRandomValuefromMutableDict:(NSMutableDictionary*) theDict {
+    NSArray *theValues = [theDict allValues];
+    return [self getRandomObjectFromArray:[NSMutableArray arrayWithArray:theValues]];
+}
 
 //borrowed from http://stackoverflow.com/questions/12677907/storing-uicolors-in-nsdictionary-and-retrieving-them
 
@@ -76,6 +85,11 @@
     UIColor *color = [UIColor colorWithRed:coreColor.red green:coreColor.green blue:coreColor.blue alpha:coreColor.alpha];
     //NSLog(@"color name :%@",color);
     return color;
+}
+
+-(BOOL)randomBoolWithYesPercentage:(int) percentage
+{
+    return arc4random_uniform(100) < percentage;
 }
 
 @end
