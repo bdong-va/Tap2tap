@@ -17,29 +17,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LU3-Zq-paN">
-                                <rect key="frame" x="165" y="177" width="84" height="30"/>
-                                <state key="normal" title="Quick Game"/>
-                                <connections>
-                                    <segue destination="qaE-FI-Mdo" kind="show" id="xN3-Nv-2V4"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYa-3E-6io">
-                                <rect key="frame" x="158" y="280" width="98" height="30"/>
-                                <state key="normal" title="Custom Game"/>
+                                <rect key="frame" x="89" y="228" width="236" height="116"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Custom Game">
+                                    <color key="titleColor" red="0.56862745098039214" green="0.40000000000000002" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="uJF-Bb-Elm" kind="show" id="kze-DY-UIY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPk-3W-6j5">
-                                <rect key="frame" x="136" y="456" width="143" height="30"/>
-                                <state key="normal" title="Unlock More Games!"/>
+                                <rect key="frame" x="47" y="314" width="321" height="221"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Unlock More Games!">
+                                    <color key="titleColor" red="0.56862745098039214" green="0.40000000000000002" blue="0.82678482165892664" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="twr-Og-JAQ" kind="presentation" id="Tex-gD-1Lr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LU3-Zq-paN">
+                                <rect key="frame" x="105" y="126" width="204" height="115"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Quick Game">
+                                    <color key="titleColor" red="0.56862745098039214" green="0.40000000000000002" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qaE-FI-Mdo" kind="show" id="xN3-Nv-2V4"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
@@ -59,14 +68,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGd-ua-W8N">
-                                <rect key="frame" x="0.0" y="28" width="414" height="150"/>
-                                <color key="backgroundColor" red="0.8799092173576355" green="0.96500557661056519" blue="0.96958369016647339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="pressPlayerButton:" destination="qaE-FI-Mdo" eventType="touchUpInside" id="sIu-yK-UqW"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOQ-Ks-uo2">
                                 <rect key="frame" x="0.0" y="586" width="414" height="150"/>
                                 <color key="backgroundColor" red="0.8799092173576355" green="0.96500557661056519" blue="0.96958369016647339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -101,6 +102,14 @@
                                     <segue destination="NaP-EE-FsM" kind="embed" id="wZO-mz-aeJ"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGd-ua-W8N">
+                                <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                <color key="backgroundColor" red="0.8799092173576355" green="0.96500557661056519" blue="0.96958369016647339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pressPlayerButton:" destination="qaE-FI-Mdo" eventType="touchUpInside" id="sIu-yK-UqW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -359,7 +368,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
@@ -403,14 +412,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="hGQ-7q-5vf">
-                                <rect key="frame" x="205" y="202" width="189" height="2"/>
+                            <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hGQ-7q-5vf">
+                                <rect key="frame" x="205" y="202" width="189" height="3"/>
+                                <color key="tintColor" red="0.56862745100000001" green="0.40000000000000002" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" red="1" green="0.89019607840000003" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
-                            <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="z9B-5F-hDe">
-                                <rect key="frame" x="20" y="202" width="184" height="2"/>
+                            <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="z9B-5F-hDe">
+                                <rect key="frame" x="20" y="202" width="184" height="3"/>
+                                <color key="trackTintColor" red="1" green="0.8901960784313725" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.56862745100000001" green="0.40000000000000002" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="AnswerDown" destination="HtU-xB-6rM" id="W1J-vw-dGv"/>
