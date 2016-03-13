@@ -14,7 +14,7 @@ UIColor* winColor;
 UIColor* lostColor;
 UIColor* normalColor;
 gameConst* constString;
-QuizViewController* quizController;
+EmbedGameViewController* quizController;
 @implementation gameViewController
 
 - (void)viewDidLoad {
@@ -39,7 +39,7 @@ QuizViewController* quizController;
 {
     NSString * segueName = segue.identifier;
     if ([segueName isEqualToString: @"quiz_embed"]) {
-        quizController = (QuizViewController *) [segue destinationViewController];
+        quizController = (EmbedGameViewController *) [segue destinationViewController];
     }
 }
 

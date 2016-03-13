@@ -19,16 +19,17 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _QuestionUp.textAlignment = NSTextAlignmentCenter;
-    _QuestionDown.textAlignment = NSTextAlignmentCenter;
-    _AnswerUp.textAlignment = NSTextAlignmentCenter;
-    _AnswerDown.textAlignment = NSTextAlignmentCenter;
+    super.QuestionUp.textAlignment = NSTextAlignmentCenter;
+    super.QuestionDown.textAlignment = NSTextAlignmentCenter;
+    super.AnswerUp.textAlignment = NSTextAlignmentCenter;
+    super.AnswerDown.textAlignment = NSTextAlignmentCenter;
     
-    [_threadProgressView1 setTransform:CGAffineTransformMakeRotation(-M_PI)];
+    
+    [super.threadProgressView1 setTransform:CGAffineTransformMakeRotation(-M_PI)];
 
-    _GoodTimeToPressButton = true;
-    [_QuestionUp setTransform:CGAffineTransformMakeRotation(-M_PI)];
-    [_AnswerUp setTransform:CGAffineTransformMakeRotation(-M_PI)];
+    super.GoodTimeToPressButton = true;
+    [super.QuestionUp setTransform:CGAffineTransformMakeRotation(-M_PI)];
+    [super.AnswerUp setTransform:CGAffineTransformMakeRotation(-M_PI)];
     puzzles = [[gameConst alloc] init];
     [self generatePuzzle];
     [NSTimer scheduledTimerWithTimeInterval:1.5
@@ -37,18 +38,6 @@
                                    userInfo:nil
                                     repeats:YES];
     
-}
-
-- (void)setQuestion:(NSString*)theQuestion
-{
-    _QuestionUp.text = theQuestion;
-    _QuestionDown.text = theQuestion;
-}
-
-- (void)setAnswer:(NSString*)theAnswer
-{
-    _AnswerUp.text = theAnswer;
-    _AnswerDown.text = theAnswer;
 }
 
 - (void)generatePuzzle
@@ -61,7 +50,7 @@
 - (void)createNewPuzzlewith:(bool)isCorrect
 {
     if (isCorrect) {
-        _GoodTimeToPressButton = true;
+        super.GoodTimeToPressButton = true;
         NSString* capital = [puzzles getRandomKeyfromDict:puzzles.capitalAndState];
         [self setAnswer:capital];
         NSString* state = puzzles.capitalAndState[capital];
@@ -69,7 +58,7 @@
     }
     else
     {
-        _GoodTimeToPressButton = false;
+        super.GoodTimeToPressButton = false;
         NSMutableDictionary* newDict = [NSMutableDictionary dictionaryWithDictionary:puzzles.capitalAndState];
         NSString* capital = [puzzles getRandomKeyfromDict:newDict];
         [self setAnswer:capital];
@@ -82,31 +71,31 @@
 
 - (BOOL)isGoodTime
 {
-    return _GoodTimeToPressButton;
+    return super.GoodTimeToPressButton;
 }
 
 -(void)updateProgressBar
 {
-    if(_Time >= 1.5f)
+    if(super.Time >= 1.5f)
     {
         //Invalidate timer when time reaches 0
-        [_Timer invalidate];
+        [super.Timer invalidate];
     }
     else
     {
-        _Time += 0.05;
-        _threadProgressView1.progress = (1.5 - _Time)/1.5;
-        _threadProgressView2.progress = (1.5 - _Time)/1.5;
+        super.Time += 0.05;
+        super.threadProgressView1.progress = (1.5 - super.Time)/1.5;
+        super.threadProgressView2.progress = (1.5 - super.Time)/1.5;
     }
 }
 
 -(void)animateProgressView2
 {
-    [_Timer invalidate];
-    _threadProgressView1.progress = 1.0;
-    _threadProgressView2.progress = 1.0;
-    _Time = 0.1;
-    _Timer = [NSTimer scheduledTimerWithTimeInterval: 0.05f
+    [super.Timer invalidate];
+    super.threadProgressView1.progress = 1.0;
+    super.threadProgressView2.progress = 1.0;
+    super.Time = 0.1;
+    super.Timer = [NSTimer scheduledTimerWithTimeInterval: 0.05f
                                              target: self
                                            selector: @selector(updateProgressBar)
                                            userInfo: nil
