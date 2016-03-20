@@ -14,11 +14,21 @@ UIColor* lostColor;
 UIColor* normalColor;
 
 gameConst* constString;
-EmbedGameViewController* quizController;
+EmbedGameViewController* capitalAndCountry;
+EmbedGameViewController* greenScreen;
+NSMutableArray* gameList;
+NSMutableArray* unplayedGameList;
+int currentGamePlayed;
+int gameMaxShouldPlayed;
+int totalScoreLimit;
+
 @implementation gameViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    currentGamePlayed = 0;
+    gameMaxShouldPlayed = 5;
+    totalScoreLimit = 15;
     self.navigationController.navigationBar.hidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
     self.buttonList = [NSMutableArray arrayWithObjects:_button1,_button2,_button3,_button4, nil];
@@ -28,6 +38,15 @@ EmbedGameViewController* quizController;
     self.scoreList[1]=@0;//OBJECTIVE C IS ABSOLUTE GARBAGE
     self.scoreList[2]=@0;//I SPENT OVER AN HOUR TRYING TO GET A BASIC INT ARRAY WORKING
     self.scoreList[3]=@0;//THIS IS WHAT I'M SETTLING WITH
+    //setting up games.
+    capitalAndCountry = [self.storyboard instantiateViewControllerWithIdentifier:@"capitalAndCountry"];
+    greenScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"greenScreenGame"];
+    self.currentVC = capitalAndCountry;
+    
+//    [self addChildViewController:capitalAndCountry];
+//    [self addChildViewController:greenScreen];
+    gameList = [NSMutableArray arrayWithObjects:capitalAndCountry, greenScreen, nil];
+    unplayedGameList = [[NSMutableArray alloc] initWithArray:gameList];
     
     [self updateScoreLabels];
     
@@ -37,43 +56,52 @@ EmbedGameViewController* quizController;
     constString = [[gameConst alloc] init];
     _button1.transform = CGAffineTransformMakeRotation(M_PI);
     _ScoreLabel1.transform = CGAffineTransformMakeRotation(M_PI);
-//    _button1.backgroundColor = [constString getColorFromDict:constString.ColorList :@"BLACK"];
     _button3.hidden = true;
     _button4.hidden = true;
     [self showViewB];
     self.initialVC = self.childViewControllers.lastObject;
-    self.substituteVC = [self.storyboard instantiateViewControllerWithIdentifier:@"wewe"];
+    self.substituteVC = [self.storyboard instantiateViewControllerWithIdentifier:@"greenScreenGame"];
     self.currentVC = self.initialVC;
+    
+    [self SwitchControllers];
+    [self resetButtonStatus];
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSString * segueName = segue.identifier;
     if ([segueName isEqualToString: @"quiz_embed"]) {
-        quizController = (EmbedGameViewController *) [segue destinationViewController];
+        _currentVC = (EmbedGameViewController *) [segue destinationViewController];
     }
 }
 
 -(IBAction)pressPlayerButton:(id)sender
 {
-    [self setButtonsStatus:sender isItWin:[quizController isGoodTime]];
+    [self setButtonsStatus:sender isItWin:[_currentVC isGoodTime]];
     [NSTimer scheduledTimerWithTimeInterval:2.0
                                      target:self
                                    selector:@selector(resetButtonStatus)
                                    userInfo:nil
                                     repeats:NO];
-//    [self SwitchControllers:sender];
-//    quizController = self.currentVC;
+    [self UpdateGameStatus];
 }
 
 
--(void)SwitchControllers:(UISegmentedControl *)sender {
-    [self addChildViewController:self.substituteVC];
-    self.substituteVC.view.frame = self.containerViewB.bounds;
-    [self moveToNewController:self.substituteVC];
+-(void)SwitchControllers{
+    if ([unplayedGameList count] == 0) {
+        unplayedGameList = [[NSMutableArray alloc] initWithArray:gameList];
+    }
+    EmbedGameViewController* thisGame = unplayedGameList[0];
+    
+    NSLog(@"switch game!");
+    NSLog(@"%@", thisGame);
+    [self addChildViewController:thisGame];
+    thisGame.view.frame = self.containerViewB.bounds;
+    [self moveToNewController:thisGame];
+    [unplayedGameList removeObject: thisGame];
 }
 
--(void)moveToNewController:(UIViewController *) newController {
+-(void)moveToNewController:(EmbedGameViewController *) newController {
     [self.currentVC willMoveToParentViewController:nil];
     [self transitionFromViewController:self.currentVC toViewController:newController duration:.6 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{}
                             completion:^(BOOL finished) {
@@ -114,14 +142,13 @@ EmbedGameViewController* quizController;
             }
         }
     }
-    
 }
 
 -(void)resetButtonStatus
 {
     for (UIButton *button  in _buttonList) {
             //TODO set back to button's name
-            [button setTitle:@" " forState:UIControlStateNormal];
+            [button setTitle:[_currentVC getGameInstruction] forState:UIControlStateNormal];
             [button setBackgroundColor:normalColor];
     }
 }
@@ -154,4 +181,14 @@ EmbedGameViewController* quizController;
 //    self.containerViewB.alpha = 1;
 }
 
+
+- (void)UpdateGameStatus
+{
+    if (currentGamePlayed > gameMaxShouldPlayed) {
+        currentGamePlayed = 0;
+        [self SwitchControllers];
+    }
+    currentGamePlayed+=1;
+
+}
 @end

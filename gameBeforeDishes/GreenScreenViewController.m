@@ -12,8 +12,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    super.QuestionUp.textColor = [UIColor redColor];
-    super.QuestionUp.text = @"test!";
+    super.gameInstruction = @"Click button when it turn GREEN!";
+    [self startGame];
 }
 
+- (void)startGame
+{
+    int randomSec = [self getRandomNumberBetween:3 to:8];
+    super.GoodTimeToPressButton = false;
+    super.Timer = [NSTimer scheduledTimerWithTimeInterval:randomSec
+                                     target:self
+                                   selector:@selector(turnGreen)
+                                   userInfo:nil
+                                    repeats:NO];
+}
+
+//copy from http://stackoverflow.com/questions/6385053/random-number-generating-in-objective-c
+-(int)getRandomNumberBetween:(int)from to:(int)to {
+    return (int)from + arc4random() % (to-from+1);
+}
+
+- (void)turnGreen
+{
+    super.GoodTimeToPressButton = true;
+    NSLog(@"it should be green now.");
+    self.view.backgroundColor = [UIColor greenColor];
+    [NSTimer scheduledTimerWithTimeInterval:1.0
+                                     target:self
+                                   selector:@selector(turnWhite)
+                                   userInfo:nil
+                                    repeats:NO];
+    
+}
+
+-(void)turnWhite
+{
+    super.GoodTimeToPressButton = false;
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self startGame];
+}
 @end

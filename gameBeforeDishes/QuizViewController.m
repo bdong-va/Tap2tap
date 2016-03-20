@@ -27,7 +27,7 @@ float timerValue;
     gameSpeedValue = [[NSUserDefaults standardUserDefaults] floatForKey:@"gameSpeed"];
     gameSpeedValue = -4*gameSpeedValue;
     timerValue = 5 + gameSpeedValue;
-    
+    super.gameInstruction = @"Is the Capital Correct?";
     
     
     super.QuestionUp.textAlignment = NSTextAlignmentCenter;
