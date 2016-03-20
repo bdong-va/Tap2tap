@@ -8,8 +8,6 @@
 
 #import "gameViewController.h"
 #import "gameConst.h"
-#import "QuizViewController.h"
-#import "GreenScreenViewController.h"
 
 UIColor* winColor;
 UIColor* lostColor;
@@ -64,7 +62,8 @@ EmbedGameViewController* quizController;
                                    selector:@selector(resetButtonStatus)
                                    userInfo:nil
                                     repeats:NO];
-    [self SwitchControllers:sender];
+//    [self SwitchControllers:sender];
+//    quizController = self.currentVC;
 }
 
 

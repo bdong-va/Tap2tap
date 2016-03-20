@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "QuizViewController.h"
+#import "GreenScreenViewController.h"
+#import "EmbedGameViewController.h"
 
 
 @interface gameConst : NSObject

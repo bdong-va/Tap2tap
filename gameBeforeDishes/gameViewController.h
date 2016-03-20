@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EmbedGameViewController.h"
+
 
 @interface gameViewController : UIViewController
 // four buttons operated by player
@@ -34,8 +36,8 @@
 @property IBOutlet UIView *containerViewA;
 @property IBOutlet UIView *containerViewB;
 
-@property (strong,nonatomic) UIViewController *initialVC;
-@property (strong,nonatomic) UIViewController *substituteVC;
-@property (strong,nonatomic) UIViewController *currentVC;
+@property (strong,nonatomic) EmbedGameViewController *initialVC;
+@property (strong,nonatomic) EmbedGameViewController *substituteVC;
+@property (strong,nonatomic) EmbedGameViewController *currentVC;
 
 @end

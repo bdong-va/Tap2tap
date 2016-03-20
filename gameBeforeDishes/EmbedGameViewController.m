@@ -35,4 +35,10 @@
     _AnswerUp.text = theAnswer;
     _AnswerDown.text = theAnswer;
 }
+
+- (NSString* )getGameInstruction
+{
+    return _gameInstruction;
+}
+
 @end
