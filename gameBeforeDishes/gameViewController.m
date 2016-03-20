@@ -9,13 +9,14 @@
 #import "gameViewController.h"
 #import "gameConst.h"
 #import "QuizViewController.h"
+#import "GreenScreenViewController.h"
 
 UIColor* winColor;
 UIColor* lostColor;
 UIColor* normalColor;
 
 gameConst* constString;
-QuizViewController* quizController;
+EmbedGameViewController* quizController;
 @implementation gameViewController
 
 - (void)viewDidLoad {
@@ -42,15 +43,16 @@ QuizViewController* quizController;
     _button3.hidden = true;
     _button4.hidden = true;
     [self showViewB];
-    
-    
+    self.initialVC = self.childViewControllers.lastObject;
+    self.substituteVC = [self.storyboard instantiateViewControllerWithIdentifier:@"wewe"];
+    self.currentVC = self.initialVC;
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSString * segueName = segue.identifier;
     if ([segueName isEqualToString: @"quiz_embed"]) {
-        quizController = (QuizViewController *) [segue destinationViewController];
+        quizController = (EmbedGameViewController *) [segue destinationViewController];
     }
 }
 
@@ -62,6 +64,24 @@ QuizViewController* quizController;
                                    selector:@selector(resetButtonStatus)
                                    userInfo:nil
                                     repeats:NO];
+    [self SwitchControllers:sender];
+}
+
+
+-(void)SwitchControllers:(UISegmentedControl *)sender {
+    [self addChildViewController:self.substituteVC];
+    self.substituteVC.view.frame = self.containerViewB.bounds;
+    [self moveToNewController:self.substituteVC];
+}
+
+-(void)moveToNewController:(UIViewController *) newController {
+    [self.currentVC willMoveToParentViewController:nil];
+    [self transitionFromViewController:self.currentVC toViewController:newController duration:.6 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{}
+                            completion:^(BOOL finished) {
+                                [self.currentVC removeFromParentViewController];
+                                [newController didMoveToParentViewController:self];
+                                self.currentVC = newController;
+                            }];
 }
 
 

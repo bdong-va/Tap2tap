@@ -34,4 +34,8 @@
 @property IBOutlet UIView *containerViewA;
 @property IBOutlet UIView *containerViewB;
 
+@property (strong,nonatomic) UIViewController *initialVC;
+@property (strong,nonatomic) UIViewController *substituteVC;
+@property (strong,nonatomic) UIViewController *currentVC;
+
 @end
