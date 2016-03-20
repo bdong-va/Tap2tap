@@ -15,12 +15,13 @@
 @implementation ViewController
 
 NSInteger numberOfPlayers;
-NSArray* namesOfPlayers;
+
 BOOL shuffleGameOrder;
 NSArray* listOfSelectedMiniGames;
 float gameSpeed;
 NSInteger maxPoints;
 NSDictionary* defaultUserDefaults;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,22 +31,24 @@ NSDictionary* defaultUserDefaults;
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"namesOfPlayers"] == NULL){
         
         numberOfPlayers = 2;
-        namesOfPlayers = @[@"Player 1", @"Player 2"];
+        _namesOfPlayers = [[NSMutableArray alloc] init];
+
+        [_namesOfPlayers addObject:@"Player 1"];
+        [_namesOfPlayers addObject:@"Player 2"];
         shuffleGameOrder = NO;
         listOfSelectedMiniGames = @[@"game1", @"game2", @"game3"];
         gameSpeed = 0.5;
-        maxPoints = 25;
+        maxPoints = 50;
         
-        [[NSUserDefaults standardUserDefaults] setObject:namesOfPlayers forKey:@"namesOfPlayers"];
+        [[NSUserDefaults standardUserDefaults] setObject:_namesOfPlayers forKey:@"namesOfPlayers"];
         [[NSUserDefaults standardUserDefaults] setInteger:numberOfPlayers forKey:@"numberOfPlayers"];
         [[NSUserDefaults standardUserDefaults] setObject:listOfSelectedMiniGames forKey:@"listOfSelectedMiniGames"];
         [[NSUserDefaults standardUserDefaults] setBool:shuffleGameOrder forKey:@"shuffleGameOrder"];
         [[NSUserDefaults standardUserDefaults] setFloat:gameSpeed forKey:@"gameSpeed"];
         [[NSUserDefaults standardUserDefaults] setInteger:maxPoints forKey:@"maxPoints"];
-    }
+   }
 
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
 }
 
 - (void)didReceiveMemoryWarning {
