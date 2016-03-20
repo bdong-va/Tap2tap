@@ -9,6 +9,7 @@
 #import "gameViewController.h"
 #import "gameConst.h"
 #import "QuizViewController.h"
+#import "GreenScreenViewController.h"
 
 UIColor* winColor;
 UIColor* lostColor;
@@ -31,8 +32,9 @@ EmbedGameViewController* quizController;
     _button3.hidden = true;
     _button4.hidden = true;
     [self showViewB];
-    
-    
+    self.initialVC = self.childViewControllers.lastObject;
+    self.substituteVC = [self.storyboard instantiateViewControllerWithIdentifier:@"wewe"];
+    self.currentVC = self.initialVC;
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -51,6 +53,24 @@ EmbedGameViewController* quizController;
                                    selector:@selector(resetButtonStatus)
                                    userInfo:nil
                                     repeats:NO];
+    [self SwitchControllers:sender];
+}
+
+
+-(void)SwitchControllers:(UISegmentedControl *)sender {
+    [self addChildViewController:self.substituteVC];
+    self.substituteVC.view.frame = self.containerViewB.bounds;
+    [self moveToNewController:self.substituteVC];
+}
+
+-(void)moveToNewController:(UIViewController *) newController {
+    [self.currentVC willMoveToParentViewController:nil];
+    [self transitionFromViewController:self.currentVC toViewController:newController duration:.6 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{}
+                            completion:^(BOOL finished) {
+                                [self.currentVC removeFromParentViewController];
+                                [newController didMoveToParentViewController:self];
+                                self.currentVC = newController;
+                            }];
 }
 
 

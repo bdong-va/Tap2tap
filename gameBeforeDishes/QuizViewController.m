@@ -30,10 +30,10 @@ float timerValue;
     
     
     
-    _QuestionUp.textAlignment = NSTextAlignmentCenter;
-    _QuestionDown.textAlignment = NSTextAlignmentCenter;
-    _AnswerUp.textAlignment = NSTextAlignmentCenter;
-    _AnswerDown.textAlignment = NSTextAlignmentCenter;
+    super.QuestionUp.textAlignment = NSTextAlignmentCenter;
+    super.QuestionDown.textAlignment = NSTextAlignmentCenter;
+    super.AnswerUp.textAlignment = NSTextAlignmentCenter;
+    super.AnswerDown.textAlignment = NSTextAlignmentCenter;
     
     
     [super.threadProgressView1 setTransform:CGAffineTransformMakeRotation(-M_PI)];
@@ -91,26 +91,16 @@ float timerValue;
 
 -(void)updateProgressBar
 {
-<<<<<<< HEAD
-    if(super.Time >= 1.5f)
-=======
-    if(_Time >= timerValue)
->>>>>>> develop
+    if(super.Time >= timerValue)
     {
         //Invalidate timer when time reaches 0
         [super.Timer invalidate];
     }
     else
     {
-<<<<<<< HEAD
         super.Time += 0.05;
-        super.threadProgressView1.progress = (1.5 - super.Time)/1.5;
-        super.threadProgressView2.progress = (1.5 - super.Time)/1.5;
-=======
-        _Time += 0.05;
-        _threadProgressView1.progress = (timerValue - _Time)/timerValue;
-        _threadProgressView2.progress = (timerValue - _Time)/timerValue;
->>>>>>> develop
+        super.threadProgressView1.progress = (timerValue - super.Time)/timerValue;
+        super.threadProgressView2.progress = (timerValue - super.Time)/timerValue;
     }
 }
 
