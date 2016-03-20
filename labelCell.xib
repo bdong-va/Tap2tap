@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,12 +15,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I6v-iB-RYm" userLabel="PlayerNameTextField">
-                        <rect key="frame" x="0.0" y="7" width="320" height="30"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I6v-iB-RYm" userLabel="PlayerNameTextField">
+                        <rect key="frame" x="8" y="8" width="304" height="27"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="I6v-iB-RYm" firstAttribute="leading" secondItem="DDr-73-ZmD" secondAttribute="leadingMargin" id="ALT-gI-ahT"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="I6v-iB-RYm" secondAttribute="trailing" id="HHu-2j-RQl"/>
+                    <constraint firstItem="I6v-iB-RYm" firstAttribute="centerX" secondItem="DDr-73-ZmD" secondAttribute="centerX" id="Il4-nF-8tt"/>
+                    <constraint firstItem="I6v-iB-RYm" firstAttribute="centerY" secondItem="DDr-73-ZmD" secondAttribute="centerY" id="XV7-wD-g2b"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="I6v-iB-RYm" secondAttribute="bottom" id="ePS-zo-qRS"/>
+                    <constraint firstItem="I6v-iB-RYm" firstAttribute="top" secondItem="DDr-73-ZmD" secondAttribute="topMargin" id="jTJ-QQ-eWS"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="textField" destination="I6v-iB-RYm" id="goz-fB-yOV"/>
