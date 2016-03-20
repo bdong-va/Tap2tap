@@ -17,8 +17,18 @@
 {
     gameConst* puzzles;
 }
+
+float timerValue;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    float gameSpeedValue;
+    gameSpeedValue = [[NSUserDefaults standardUserDefaults] floatForKey:@"gameSpeed"];
+    gameSpeedValue = -4*gameSpeedValue;
+    timerValue = 5 + gameSpeedValue;
+    
+    
+    
     _QuestionUp.textAlignment = NSTextAlignmentCenter;
     _QuestionDown.textAlignment = NSTextAlignmentCenter;
     _AnswerUp.textAlignment = NSTextAlignmentCenter;
@@ -31,12 +41,16 @@
     [_AnswerUp setTransform:CGAffineTransformMakeRotation(-M_PI)];
     puzzles = [[gameConst alloc] init];
     [self generatePuzzle];
-    [NSTimer scheduledTimerWithTimeInterval:1.5
+    [NSTimer scheduledTimerWithTimeInterval:timerValue
                                      target:self
                                    selector:@selector(generatePuzzle)
                                    userInfo:nil
                                     repeats:YES];
     
+    
+
+    
+
 }
 
 - (void)setQuestion:(NSString*)theQuestion
@@ -87,7 +101,7 @@
 
 -(void)updateProgressBar
 {
-    if(_Time >= 1.5f)
+    if(_Time >= timerValue)
     {
         //Invalidate timer when time reaches 0
         [_Timer invalidate];
@@ -95,8 +109,8 @@
     else
     {
         _Time += 0.05;
-        _threadProgressView1.progress = (1.5 - _Time)/1.5;
-        _threadProgressView2.progress = (1.5 - _Time)/1.5;
+        _threadProgressView1.progress = (timerValue - _Time)/timerValue;
+        _threadProgressView2.progress = (timerValue - _Time)/timerValue;
     }
 }
 
