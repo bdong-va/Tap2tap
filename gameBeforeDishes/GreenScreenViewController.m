@@ -35,7 +35,6 @@
 - (void)turnGreen
 {
     super.GoodTimeToPressButton = true;
-    NSLog(@"it should be green now.");
     self.view.backgroundColor = [UIColor greenColor];
     [NSTimer scheduledTimerWithTimeInterval:1.0
                                      target:self

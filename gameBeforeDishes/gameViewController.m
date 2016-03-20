@@ -21,6 +21,7 @@ NSMutableArray* unplayedGameList;
 int currentGamePlayed;
 int gameMaxShouldPlayed;
 int totalScoreLimit;
+bool buttonLock;
 
 @implementation gameViewController
 
@@ -28,7 +29,8 @@ int totalScoreLimit;
     [super viewDidLoad];
     currentGamePlayed = 0;
     gameMaxShouldPlayed = 5;
-    totalScoreLimit = 15;
+    totalScoreLimit = [[NSUserDefaults standardUserDefaults] integerForKey:@"maxPoints"];
+    buttonLock = false;
     self.navigationController.navigationBar.hidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
     self.buttonList = [NSMutableArray arrayWithObjects:_button1,_button2,_button3,_button4, nil];
@@ -77,13 +79,17 @@ int totalScoreLimit;
 
 -(IBAction)pressPlayerButton:(id)sender
 {
-    [self setButtonsStatus:sender isItWin:[_currentVC isGoodTime]];
-    [NSTimer scheduledTimerWithTimeInterval:2.0
-                                     target:self
-                                   selector:@selector(resetButtonStatus)
-                                   userInfo:nil
-                                    repeats:NO];
-    [self UpdateGameStatus];
+    if (buttonLock == false) {
+        buttonLock = true;
+        [self setButtonsStatus:sender isItWin:[_currentVC isGoodTime]];
+        [NSTimer scheduledTimerWithTimeInterval:2.0
+                                         target:self
+                                       selector:@selector(resetButtonStatus)
+                                       userInfo:nil
+                                        repeats:NO];
+        [self UpdateGameStatus];
+    }
+
 }
 
 
@@ -93,7 +99,6 @@ int totalScoreLimit;
     }
     EmbedGameViewController* thisGame = unplayedGameList[0];
     
-    NSLog(@"switch game!");
     NSLog(@"%@", thisGame);
     [self addChildViewController:thisGame];
     thisGame.view.frame = self.containerViewB.bounds;
@@ -151,6 +156,7 @@ int totalScoreLimit;
             [button setTitle:[_currentVC getGameInstruction] forState:UIControlStateNormal];
             [button setBackgroundColor:normalColor];
     }
+    buttonLock = false;
 }
 
 -(void)updateScoreLabels
@@ -184,11 +190,11 @@ int totalScoreLimit;
 
 - (void)UpdateGameStatus
 {
+    currentGamePlayed++;
     if (currentGamePlayed > gameMaxShouldPlayed) {
         currentGamePlayed = 0;
         [self SwitchControllers];
     }
-    currentGamePlayed+=1;
 
 }
 @end
