@@ -14,6 +14,7 @@
     [super viewDidLoad];
     super.QuestionUp.textColor = [UIColor redColor];
     super.QuestionUp.text = @"test!";
+    NSLog(@"adf");
 }
 
 @end

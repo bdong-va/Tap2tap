@@ -42,7 +42,7 @@ EmbedGameViewController* quizController;
     _button4.hidden = true;
     [self showViewB];
     self.initialVC = self.childViewControllers.lastObject;
-    self.substituteVC = [self.storyboard instantiateViewControllerWithIdentifier:@"wewe"];
+    self.substituteVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CDGVC"];
     self.currentVC = self.initialVC;
 }
 
@@ -62,8 +62,8 @@ EmbedGameViewController* quizController;
                                    selector:@selector(resetButtonStatus)
                                    userInfo:nil
                                     repeats:NO];
-//    [self SwitchControllers:sender];
-//    quizController = self.currentVC;
+    [self SwitchControllers:sender];
+    quizController = self.currentVC;
 }
 
 
@@ -71,6 +71,7 @@ EmbedGameViewController* quizController;
     [self addChildViewController:self.substituteVC];
     self.substituteVC.view.frame = self.containerViewB.bounds;
     [self moveToNewController:self.substituteVC];
+    
 }
 
 -(void)moveToNewController:(UIViewController *) newController {
