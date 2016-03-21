@@ -62,7 +62,7 @@ bool buttonLock;
     _button4.hidden = true;
     [self showViewB];
     self.initialVC = self.childViewControllers.lastObject;
-    self.substituteVC = [self.storyboard instantiateViewControllerWithIdentifier:@"greenScreenGame"];
+    self.substituteVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CDGVC"];
     self.currentVC = self.initialVC;
     
     [self SwitchControllers];
