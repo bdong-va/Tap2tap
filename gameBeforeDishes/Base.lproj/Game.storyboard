@@ -136,6 +136,12 @@
                                 <rect key="frame" x="20" y="202" width="184" height="3"/>
                                 <color key="trackTintColor" red="1" green="0.8901960784313725" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="skyline.png" translatesAutoresizingMaskIntoConstraints="NO" id="xMC-Yf-ZdE">
+                                <rect key="frame" x="0.0" y="342" width="414" height="71"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="skylineU.png" translatesAutoresizingMaskIntoConstraints="NO" id="aiA-le-E9p">
+                                <rect key="frame" x="0.0" y="-1" width="414" height="71"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.56862745100000001" green="0.40000000000000002" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -242,4 +248,8 @@
             <point key="canvasLocation" x="2759" y="455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="skyline.png" width="770" height="182"/>
+        <image name="skylineU.png" width="770" height="182"/>
+    </resources>
 </document>

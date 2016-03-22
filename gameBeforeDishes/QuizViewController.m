@@ -43,23 +43,23 @@ float timerValue;
     [super.AnswerUp setTransform:CGAffineTransformMakeRotation(-M_PI)];
     puzzles = [[gameConst alloc] init];
     [self generatePuzzle];
-    [NSTimer scheduledTimerWithTimeInterval:timerValue
+    super.Timer = [NSTimer scheduledTimerWithTimeInterval:timerValue
                                      target:self
                                    selector:@selector(generatePuzzle)
                                    userInfo:nil
-                                    repeats:YES];
-    
-    
-
-    
-
+                                    repeats:NO];
 }
 
 - (void)generatePuzzle
 {
     [self animateProgressView2];
     [self createNewPuzzlewith:[puzzles randomBoolWithYesPercentage:30]];
-    
+    [super.Timer invalidate];
+    super.Timer = [NSTimer scheduledTimerWithTimeInterval:timerValue
+                                                   target:self
+                                                 selector:@selector(generatePuzzle)
+                                                 userInfo:nil
+                                                  repeats:NO];
 }
 
 - (void)createNewPuzzlewith:(bool)isCorrect
@@ -94,7 +94,7 @@ float timerValue;
     if(super.Time >= timerValue)
     {
         //Invalidate timer when time reaches 0
-        [super.Timer invalidate];
+        [super.countdownTimer invalidate];
     }
     else
     {
@@ -106,14 +106,27 @@ float timerValue;
 
 -(void)animateProgressView2
 {
-    [super.Timer invalidate];
+    [super.countdownTimer invalidate];
     super.threadProgressView1.progress = 1.0;
     super.threadProgressView2.progress = 1.0;
     super.Time = 0.1;
-    super.Timer = [NSTimer scheduledTimerWithTimeInterval: 0.05f
+    super.countdownTimer = [NSTimer scheduledTimerWithTimeInterval: 0.05f
                                              target: self
                                            selector: @selector(updateProgressBar)
                                            userInfo: nil
                                             repeats: YES];
+}
+
+- (void)resetGame
+{
+    [super.Timer invalidate];
+    [self generatePuzzle];
+}
+
+- (void)pauseGame
+{
+    [super.countdownTimer invalidate];
+    [super.Timer invalidate];
+    super.Time = timerValue;
 }
 @end

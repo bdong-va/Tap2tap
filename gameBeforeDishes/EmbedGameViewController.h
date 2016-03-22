@@ -13,6 +13,7 @@
 @property BOOL GoodTimeToPressButton;
 @property float Time;
 @property NSTimer* Timer;
+@property NSTimer* countdownTimer;
 @property NSString* gameInstruction;
 @property IBOutlet UILabel* QuestionUp;
 @property IBOutlet UILabel* QuestionDown;
@@ -27,4 +28,5 @@
 - (BOOL)isGoodTime;
 - (NSString* )getGameInstruction;
 - (void)resetGame;
+- (void)pauseGame;
 @end
