@@ -23,10 +23,12 @@ NSInteger maxPoints;
 NSDictionary* defaultUserDefaults;
 
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    //_secondTapButton.transform =
+    [_secondTapButton setTransform:CGAffineTransformMakeRotation(-M_PI)];
   
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"namesOfPlayers"] == NULL){
         
