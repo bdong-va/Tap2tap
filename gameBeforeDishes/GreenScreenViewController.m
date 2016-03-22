@@ -12,7 +12,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    super.gameInstruction = @"Click button when it turn GREEN!";
+    super.gameInstruction = @"Click button when it turns GREEN!";
     [self startGame];
 }
 
@@ -49,5 +49,12 @@
     super.GoodTimeToPressButton = false;
     self.view.backgroundColor = [UIColor whiteColor];
     [self startGame];
+}
+
+- (void)resetGame
+{
+    [self.Timer invalidate];
+    [self startGame];
+
 }
 @end

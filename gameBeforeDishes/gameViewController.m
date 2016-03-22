@@ -16,6 +16,7 @@ UIColor* normalColor;
 gameConst* constString;
 EmbedGameViewController* capitalAndCountry;
 EmbedGameViewController* greenScreen;
+EmbedGameViewController* CDGVC;
 NSMutableArray* gameList;
 NSMutableArray* unplayedGameList;
 int currentGamePlayed;
@@ -43,11 +44,12 @@ bool buttonLock;
     //setting up games.
     capitalAndCountry = [self.storyboard instantiateViewControllerWithIdentifier:@"capitalAndCountry"];
     greenScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"greenScreenGame"];
+    CDGVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CDGVC"];
     self.currentVC = capitalAndCountry;
     
 //    [self addChildViewController:capitalAndCountry];
 //    [self addChildViewController:greenScreen];
-    gameList = [NSMutableArray arrayWithObjects:capitalAndCountry, greenScreen, nil];
+    gameList = [NSMutableArray arrayWithObjects:capitalAndCountry,CDGVC, greenScreen, nil];
     unplayedGameList = [[NSMutableArray alloc] initWithArray:gameList];
     
     [self updateScoreLabels];
@@ -157,6 +159,7 @@ bool buttonLock;
             [button setBackgroundColor:normalColor];
     }
     buttonLock = false;
+    [_currentVC resetGame];
 }
 
 -(void)updateScoreLabels

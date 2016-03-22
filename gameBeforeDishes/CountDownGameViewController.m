@@ -22,7 +22,7 @@ int iterations;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self startGame];
-
+    super.gameInstruction = @"Be the first to click when counter gets to 0!";
     //[super.threadProgressView1 setTransform:CGAffineTransformMakeRotation(-M_PI)];
     UILabel* lab = [super QuestionDown];
     [lab setTransform:CGAffineTransformMakeRotation(-M_PI)];
@@ -31,15 +31,17 @@ int iterations;
 
 -(void) startGame{
     super.GoodTimeToPressButton = NO;
+    [fastTimer invalidate];
     a = 1.00;
     _countdownNumber = 9;
     iterations = 0;
-    
+    super.QuestionUp.alpha = 1;
+    super.QuestionDown.alpha = 1;
     super.QuestionUp.text = [NSMutableString stringWithFormat:@"%d", _countdownNumber];
     super.QuestionDown.text = [NSMutableString stringWithFormat:@"%d", _countdownNumber];
     
     
-    timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+    super.Timer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                              target:self
                                            selector:@selector(tick)
                                            userInfo:nil
@@ -57,6 +59,7 @@ int iterations;
 - (void) tick{
     if (_countdownNumber <=0){
         [timer invalidate];
+        [fastTimer invalidate];
         super.GoodTimeToPressButton = YES;
     }
   
@@ -82,6 +85,11 @@ int iterations;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)resetGame{
+    [super.Timer invalidate];
+    [self startGame];
 }
 
 /*

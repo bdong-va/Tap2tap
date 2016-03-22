@@ -41,4 +41,7 @@
     return _gameInstruction;
 }
 
+- (void)resetGame
+{
+}
 @end

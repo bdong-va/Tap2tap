@@ -26,4 +26,5 @@
 - (void)setAnswer:(NSString*)theAnswer;
 - (BOOL)isGoodTime;
 - (NSString* )getGameInstruction;
+- (void)resetGame;
 @end
