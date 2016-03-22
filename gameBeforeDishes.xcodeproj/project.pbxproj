@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF1A17EB1CA0CD740032DD73 /* skyline.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1A17EA1CA0CD740032DD73 /* skyline.png */; };
+		BF1A17ED1CA0CE110032DD73 /* skylineU.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1A17EC1CA0CE110032DD73 /* skylineU.png */; };
 		BF72CCF81C95C41900ECBC36 /* EmbedGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF72CCF61C95C41900ECBC36 /* EmbedGameViewController.m */; };
 		BF7BFB531C52CB6A0012B29D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7BFB521C52CB6A0012B29D /* main.m */; };
 		BF7BFB561C52CB6A0012B29D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7BFB551C52CB6A0012B29D /* AppDelegate.m */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF1A17EA1CA0CD740032DD73 /* skyline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skyline.png; sourceTree = "<group>"; };
+		BF1A17EC1CA0CE110032DD73 /* skylineU.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skylineU.png; sourceTree = "<group>"; };
 		BF72CCF51C95C41900ECBC36 /* EmbedGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmbedGameViewController.h; sourceTree = "<group>"; };
 		BF72CCF61C95C41900ECBC36 /* EmbedGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmbedGameViewController.m; sourceTree = "<group>"; };
 		BF7BFB4E1C52CB6A0012B29D /* gameBeforeDishes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gameBeforeDishes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +151,8 @@
 				D331038C1C98840E007D1DC8 /* labelCell.xib */,
 				D331038E1C9884E2007D1DC8 /* textfieldTableViewCell.h */,
 				D331038F1C9884E2007D1DC8 /* textfieldTableViewCell.m */,
+				BF1A17EA1CA0CD740032DD73 /* skyline.png */,
+				BF1A17EC1CA0CE110032DD73 /* skylineU.png */,
 				BFB93F161C8CA13400B69F71 /* gameConst.h */,
 				BFB93F171C8CA13400B69F71 /* gameConst.m */,
 				BFB93F101C8CA10300B69F71 /* gameViewController.h */,
@@ -318,6 +324,8 @@
 				BFA5D1711C95B37F006822A7 /* Purchase.storyboard in Resources */,
 				BF7BFB611C52CB6B0012B29D /* Assets.xcassets in Resources */,
 				D331038D1C98840E007D1DC8 /* labelCell.xib in Resources */,
+				BF1A17EB1CA0CD740032DD73 /* skyline.png in Resources */,
+				BF1A17ED1CA0CE110032DD73 /* skylineU.png in Resources */,
 				BF7BFB5C1C52CB6B0012B29D /* Main.storyboard in Resources */,
 				BFA5D16F1C95B35F006822A7 /* Setting.storyboard in Resources */,
 			);

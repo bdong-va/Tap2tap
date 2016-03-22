@@ -44,4 +44,8 @@
 - (void)resetGame
 {
 }
+
+-(void)pauseGame
+{
+}
 @end

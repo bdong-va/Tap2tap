@@ -37,10 +37,10 @@ bool buttonLock;
     self.buttonList = [NSMutableArray arrayWithObjects:_button1,_button2,_button3,_button4, nil];
     self.scoreLabelList = [NSMutableArray arrayWithObjects:_ScoreLabel1,_ScoreLabel2,_ScoreLabel3,_ScoreLabel4, nil];
     self.scoreList = [NSMutableArray arrayWithCapacity:4];
-    self.scoreList[0]=@0;//
-    self.scoreList[1]=@0;//OBJECTIVE C IS ABSOLUTE GARBAGE
-    self.scoreList[2]=@0;//I SPENT OVER AN HOUR TRYING TO GET A BASIC INT ARRAY WORKING
-    self.scoreList[3]=@0;//THIS IS WHAT I'M SETTLING WITH
+    self.scoreList[0]=@0;
+    self.scoreList[1]=@0;
+    self.scoreList[2]=@0;
+    self.scoreList[3]=@0;
     //setting up games.
     capitalAndCountry = [self.storyboard instantiateViewControllerWithIdentifier:@"capitalAndCountry"];
     greenScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"greenScreenGame"];
@@ -89,7 +89,7 @@ bool buttonLock;
                                        selector:@selector(resetButtonStatus)
                                        userInfo:nil
                                         repeats:NO];
-        [self UpdateGameStatus];
+        [_currentVC pauseGame];
     }
 
 }
@@ -153,13 +153,15 @@ bool buttonLock;
 
 -(void)resetButtonStatus
 {
+    buttonLock = false;
+    [_currentVC resetGame];
+    [self UpdateGameStatus];
     for (UIButton *button  in _buttonList) {
             //TODO set back to button's name
             [button setTitle:[_currentVC getGameInstruction] forState:UIControlStateNormal];
             [button setBackgroundColor:normalColor];
     }
-    buttonLock = false;
-    [_currentVC resetGame];
+
 }
 
 -(void)updateScoreLabels
