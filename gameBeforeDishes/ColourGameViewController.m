@@ -1,19 +1,20 @@
 //
-//  QuizViewController.m
+//  ColourGameViewController.m
 //  gameBeforeDishes
 //
-//  Created by bdong on 2016-03-06.
+//  Created by bdong on 2016-03-27.
 //  Copyright © 2016 bdong. All rights reserved.
 //
 
-#import "QuizViewController.h"
+#import "ColourGameViewController.h"
 #import "gameConst.h"
 
-@interface QuizViewController ()
+
+@interface ColourGameViewController ()
 
 @end
 
-@implementation QuizViewController
+@implementation ColourGameViewController
 {
     gameConst* puzzles;
 }
@@ -21,12 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     float gameSpeedValue;
     gameSpeedValue = [[NSUserDefaults standardUserDefaults] floatForKey:@"gameSpeed"];
     gameSpeedValue = -4*gameSpeedValue;
     super.timerValue = 5 + gameSpeedValue;
-    super.gameInstruction = @"Is the Capital Correct?";
+    super.gameInstruction = @"Is Color Match Word?";
     
     
     super.QuestionUp.textAlignment = NSTextAlignmentCenter;
@@ -36,12 +37,17 @@
     
     
     [super.threadProgressView1 setTransform:CGAffineTransformMakeRotation(-M_PI)];
-
+    
     super.GoodTimeToPressButton = true;
     [super.QuestionUp setTransform:CGAffineTransformMakeRotation(-M_PI)];
     [super.AnswerUp setTransform:CGAffineTransformMakeRotation(-M_PI)];
     puzzles = [[gameConst alloc] init];
     [self generatePuzzle];
+    super.Timer = [NSTimer scheduledTimerWithTimeInterval:super.timerValue
+                                                   target:self
+                                                 selector:@selector(generatePuzzle)
+                                                 userInfo:nil
+                                                  repeats:NO];
 }
 
 - (void)generatePuzzle
@@ -60,21 +66,22 @@
 {
     if (isCorrect) {
         super.GoodTimeToPressButton = true;
-        NSString* capital = [puzzles getRandomKeyfromDict:puzzles.capitalAndState];
-        [self setAnswer:capital];
-        NSString* state = puzzles.capitalAndState[capital];
-        [self setQuestion:state];
+        NSString* colorName = [puzzles getRandomKeyfromDict:puzzles.ColorList];
+        [self setAnswer:colorName];
+        UIColor* correctColor = [puzzles getColorFromDict:puzzles.ColorList :colorName];
+        self.AnswerUp.textColor = correctColor;
+        self.AnswerDown.textColor = correctColor;
     }
     else
     {
         super.GoodTimeToPressButton = false;
-        NSMutableDictionary* newDict = [NSMutableDictionary dictionaryWithDictionary:puzzles.capitalAndState];
-        NSString* capital = [puzzles getRandomKeyfromDict:newDict];
-        [self setAnswer:capital];
-        [newDict removeObjectForKey:capital];
-        NSString* state = [puzzles getRandomValuefromMutableDict:newDict];
-        [self setQuestion:state];
-        
+        NSMutableDictionary* newDict = [NSMutableDictionary dictionaryWithDictionary:puzzles.ColorList];
+        NSString* colorName = [puzzles getRandomKeyfromDict:puzzles.ColorList];
+        [self setAnswer:colorName];
+        [newDict removeObjectForKey:colorName];
+        UIColor* incorrectColor = [puzzles getRandomColorFromDict:newDict];
+        self.AnswerUp.textColor = incorrectColor;
+        self.AnswerDown.textColor = incorrectColor;
     }
 }
 
@@ -105,10 +112,10 @@
     super.threadProgressView2.progress = 1.0;
     super.Time = 0.1;
     super.countdownTimer = [NSTimer scheduledTimerWithTimeInterval: 0.05f
-                                             target: self
-                                           selector: @selector(updateProgressBar)
-                                           userInfo: nil
-                                            repeats: YES];
+                                                            target: self
+                                                          selector: @selector(updateProgressBar)
+                                                          userInfo: nil
+                                                           repeats: YES];
 }
 
 - (void)resetGame

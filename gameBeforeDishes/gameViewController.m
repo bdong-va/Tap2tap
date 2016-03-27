@@ -17,6 +17,9 @@ gameConst* constString;
 EmbedGameViewController* capitalAndCountry;
 EmbedGameViewController* greenScreen;
 EmbedGameViewController* CDGVC;
+EmbedGameViewController* colourGame;
+EmbedGameViewController* alphabetGame;
+EmbedGameViewController* mathGame;
 NSMutableArray* gameList;
 NSMutableArray* unplayedGameList;
 int currentGamePlayed;
@@ -45,11 +48,15 @@ bool buttonLock;
     capitalAndCountry = [self.storyboard instantiateViewControllerWithIdentifier:@"capitalAndCountry"];
     greenScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"greenScreenGame"];
     CDGVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CDGVC"];
+    colourGame = [self.storyboard instantiateViewControllerWithIdentifier:@"colourGame"];
+    alphabetGame = [self.storyboard instantiateViewControllerWithIdentifier:@"alphabetGame"];
+    mathGame = [self.storyboard instantiateViewControllerWithIdentifier:@"mathGame"];
+
     self.currentVC = capitalAndCountry;
     
 //    [self addChildViewController:capitalAndCountry];
 //    [self addChildViewController:greenScreen];
-    gameList = [NSMutableArray arrayWithObjects:capitalAndCountry,CDGVC, greenScreen, nil];
+    gameList = [NSMutableArray arrayWithObjects:capitalAndCountry, mathGame, alphabetGame, colourGame, CDGVC, greenScreen, nil];
     unplayedGameList = [[NSMutableArray alloc] initWithArray:gameList];
     
     [self updateScoreLabels];
@@ -90,6 +97,7 @@ bool buttonLock;
                                        userInfo:nil
                                         repeats:NO];
         [_currentVC pauseGame];
+        [_currentVC showAnswer];
     }
 
 }

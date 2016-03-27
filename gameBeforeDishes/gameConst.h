@@ -21,6 +21,8 @@
 @property NSMutableArray* NegativeLostText;
 @property NSDictionary* ColorList;
 @property NSDictionary* capitalAndState;
+@property NSString* correctAlphabet;
+@property NSDictionary* wrongAlphabet;
 
 - (NSString*)getRandomObjectFromArray:(NSMutableArray*) theArray;
 - (NSString*)getRandomKeyfromDict:(NSDictionary*) theDict;
@@ -28,5 +30,6 @@
 - (NSString*)getRandomValuefromMutableDict:(NSMutableDictionary*) theDict;
 - (NSString *)convertColorToString :(UIColor *)colorname;
 -(UIColor *)getColorFromDict :(NSDictionary *)dicname :(NSString *)keyname;
+- (UIColor *)getRandomColorFromDict :(NSDictionary *)dicname;
 -(BOOL)randomBoolWithYesPercentage:(int) percentage;
 @end
