@@ -32,6 +32,7 @@
 @property NSMutableArray* scoreLabelList;
 @property NSMutableArray* scoreList;
 
+@property IBOutlet UIButton* backButton;
 
 @property IBOutlet UIView *containerViewA;
 @property IBOutlet UIView *containerViewB;
