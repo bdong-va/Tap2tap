@@ -63,6 +63,18 @@
                                  @"Beirut":@"Lebanon",
                                  @"Washington D.C.":@"USA",
                                  };
+        self.correctAlphabet = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        self.wrongAlphabet =  @{
+                           @"ABCDEFGHIJKLNMOPQRSTUVWXYZ":@"ABCDEFGHIJKL>nm<OPQRSTUVWXYZ",
+                           @"ABCDEFGHIJKLMNOPRQSTUVWXYZ":@"ABCDEFGHIJKLMNOP>rq<STUVWXYZ",
+                           @"ABCDEFGHJIKLMNOPQRSTUVWXYZ":@"ABCDEFGH>ji<KLMNOPQRSTUVWXYZ",
+                           @"ABCDEFGHIJKLMNOPQRSTVUWXYZ":@"ABCDEFGHIJKLMNOPQRST>vu<WXYZ",
+                           @"ABCDFEGHIJKLMNOPQRSTUVWXYZ":@"ABCD>fe<GHIJKLMNOPQRSTUVWXYZ",
+                           @"ABCDEFGHIJKLMNPOQRSTUVWXYZ":@"ABCDEFGHIJKLMN>po<QRSTUVWXYZ",
+                           @"ABDCEFGHIJKLMNOPQRSTUVWXYZ":@"AB>dc<EFGHIJKLMNOPQRSTUVWXYZ",
+                           @"ABCDEFGHIJKLMNOPQRSTUVWYXZ":@"ABCDEFGHIJKLMNOPQRSTUVW>yx<Z",
+                           @"ABCDEFGHIJKLMNOPQRSTUWVXYZ":@"ABCDEFGHIJKLMNOPQRSTU>wv<XYZ",
+                           };
     }
     
     return self;

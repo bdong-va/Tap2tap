@@ -30,4 +30,5 @@
 - (NSString* )getGameInstruction;
 - (void)resetGame;
 - (void)pauseGame;
+- (void)showAnswer;
 @end

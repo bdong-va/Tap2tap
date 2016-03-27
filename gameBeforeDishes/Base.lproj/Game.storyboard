@@ -308,6 +308,60 @@
             </objects>
             <point key="canvasLocation" x="3500" y="455"/>
         </scene>
+        <!--Alphabet Game View Controller-->
+        <scene sceneID="y2v-55-gra">
+            <objects>
+                <viewController storyboardIdentifier="alphabetGame" id="eg8-5I-vLY" customClass="AlphabetGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7SC-bE-RWQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="v8K-3s-sgR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Juu-ho-FYG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AU" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCu-Fu-ojc">
+                                <rect key="frame" x="107" y="51" width="200" height="143"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MOX-x8-Mrb">
+                                <rect key="frame" x="205" y="202" width="189" height="2.5"/>
+                                <color key="tintColor" red="0.56862745100000001" green="0.40000000000000002" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" red="1" green="0.89019607840000003" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="M4e-g3-DcW">
+                                <rect key="frame" x="20" y="202" width="184" height="2.5"/>
+                                <color key="trackTintColor" red="1" green="0.89019607840000003" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="skyline.png" translatesAutoresizingMaskIntoConstraints="NO" id="eyb-hQ-Q3O">
+                                <rect key="frame" x="0.0" y="342" width="414" height="71"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="skylineU.png" translatesAutoresizingMaskIntoConstraints="NO" id="zFN-c5-lHc">
+                                <rect key="frame" x="0.0" y="-1" width="414" height="71"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVl-1z-pBY">
+                                <rect key="frame" x="107" y="211.5" width="200" height="133.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.56862745100000001" green="0.40000000000000002" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="AnswerDown" destination="fVl-1z-pBY" id="Lmt-D7-5DD"/>
+                        <outlet property="AnswerUp" destination="OCu-Fu-ojc" id="zrC-N3-01K"/>
+                        <outlet property="threadProgressView1" destination="M4e-g3-DcW" id="ymM-TX-a33"/>
+                        <outlet property="threadProgressView2" destination="MOX-x8-Mrb" id="vcO-f8-BW5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ViE-VH-fMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4206" y="455"/>
+        </scene>
     </scenes>
     <resources>
         <image name="skyline.png" width="770" height="182"/>

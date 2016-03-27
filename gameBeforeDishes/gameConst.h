@@ -21,6 +21,8 @@
 @property NSMutableArray* NegativeLostText;
 @property NSDictionary* ColorList;
 @property NSDictionary* capitalAndState;
+@property NSString* correctAlphabet;
+@property NSDictionary* wrongAlphabet;
 
 - (NSString*)getRandomObjectFromArray:(NSMutableArray*) theArray;
 - (NSString*)getRandomKeyfromDict:(NSDictionary*) theDict;

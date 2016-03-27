@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF0345781CA8335F0056E5D7 /* ColourGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0345771CA8335F0056E5D7 /* ColourGameViewController.m */; };
+		BF03457B1CA83EE80056E5D7 /* AlphabetGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF03457A1CA83EE80056E5D7 /* AlphabetGameViewController.m */; };
 		BF1A17EB1CA0CD740032DD73 /* skyline.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1A17EA1CA0CD740032DD73 /* skyline.png */; };
 		BF1A17ED1CA0CE110032DD73 /* skylineU.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1A17EC1CA0CE110032DD73 /* skylineU.png */; };
 		BF72CCF81C95C41900ECBC36 /* EmbedGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF72CCF61C95C41900ECBC36 /* EmbedGameViewController.m */; };
@@ -56,6 +57,8 @@
 /* Begin PBXFileReference section */
 		BF0345761CA8335F0056E5D7 /* ColourGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColourGameViewController.h; sourceTree = "<group>"; };
 		BF0345771CA8335F0056E5D7 /* ColourGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColourGameViewController.m; sourceTree = "<group>"; };
+		BF0345791CA83EE80056E5D7 /* AlphabetGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphabetGameViewController.h; sourceTree = "<group>"; };
+		BF03457A1CA83EE80056E5D7 /* AlphabetGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlphabetGameViewController.m; sourceTree = "<group>"; };
 		BF1A17EA1CA0CD740032DD73 /* skyline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skyline.png; sourceTree = "<group>"; };
 		BF1A17EC1CA0CE110032DD73 /* skylineU.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skylineU.png; sourceTree = "<group>"; };
 		BF72CCF51C95C41900ECBC36 /* EmbedGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmbedGameViewController.h; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 				BFB93F171C8CA13400B69F71 /* gameConst.m */,
 				BFB93F101C8CA10300B69F71 /* gameViewController.h */,
 				BFB93F111C8CA10300B69F71 /* gameViewController.m */,
+				BF0345791CA83EE80056E5D7 /* AlphabetGameViewController.h */,
+				BF03457A1CA83EE80056E5D7 /* AlphabetGameViewController.m */,
 				BFB93F131C8CA10E00B69F71 /* QuizViewController.h */,
 				BFB93F141C8CA10E00B69F71 /* QuizViewController.m */,
 				BFCA18B51C9C9F6700B8F8F0 /* GreenScreenViewController.h */,
@@ -360,6 +365,7 @@
 				D3B291BC1C9EFC02001456F4 /* CountDownGameViewController.m in Sources */,
 				BFCA18B71C9C9F6700B8F8F0 /* GreenScreenViewController.m in Sources */,
 				BF0345781CA8335F0056E5D7 /* ColourGameViewController.m in Sources */,
+				BF03457B1CA83EE80056E5D7 /* AlphabetGameViewController.m in Sources */,
 				BFB93F121C8CA10300B69F71 /* gameViewController.m in Sources */,
 				BF7BFB591C52CB6A0012B29D /* ViewController.m in Sources */,
 				BFB93F151C8CA10E00B69F71 /* QuizViewController.m in Sources */,

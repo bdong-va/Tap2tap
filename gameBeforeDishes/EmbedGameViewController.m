@@ -48,4 +48,8 @@
 -(void)pauseGame
 {
 }
+
+-(void)showAnswer
+{
+}
 @end
