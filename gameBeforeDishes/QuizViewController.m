@@ -42,11 +42,6 @@
     [super.AnswerUp setTransform:CGAffineTransformMakeRotation(-M_PI)];
     puzzles = [[gameConst alloc] init];
     [self generatePuzzle];
-    super.Timer = [NSTimer scheduledTimerWithTimeInterval:super.timerValue
-                                     target:self
-                                   selector:@selector(generatePuzzle)
-                                   userInfo:nil
-                                    repeats:NO];
 }
 
 - (void)generatePuzzle

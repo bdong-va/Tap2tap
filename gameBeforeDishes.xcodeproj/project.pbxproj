@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A019F0411CA84231005D4F71 /* MathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A019F0401CA84231005D4F71 /* MathViewController.m */; };
 		BF0345781CA8335F0056E5D7 /* ColourGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0345771CA8335F0056E5D7 /* ColourGameViewController.m */; };
 		BF03457B1CA83EE80056E5D7 /* AlphabetGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF03457A1CA83EE80056E5D7 /* AlphabetGameViewController.m */; };
 		BF1A17EB1CA0CD740032DD73 /* skyline.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1A17EA1CA0CD740032DD73 /* skyline.png */; };
@@ -55,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A019F03F1CA84231005D4F71 /* MathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathViewController.h; path = ../MathViewController.h; sourceTree = "<group>"; };
+		A019F0401CA84231005D4F71 /* MathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathViewController.m; path = ../MathViewController.m; sourceTree = "<group>"; };
 		BF0345761CA8335F0056E5D7 /* ColourGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColourGameViewController.h; sourceTree = "<group>"; };
 		BF0345771CA8335F0056E5D7 /* ColourGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColourGameViewController.m; sourceTree = "<group>"; };
 		BF0345791CA83EE80056E5D7 /* AlphabetGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphabetGameViewController.h; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				BF03457A1CA83EE80056E5D7 /* AlphabetGameViewController.m */,
 				BFB93F131C8CA10E00B69F71 /* QuizViewController.h */,
 				BFB93F141C8CA10E00B69F71 /* QuizViewController.m */,
+				A019F03F1CA84231005D4F71 /* MathViewController.h */,
+				A019F0401CA84231005D4F71 /* MathViewController.m */,
 				BFCA18B51C9C9F6700B8F8F0 /* GreenScreenViewController.h */,
 				BFCA18B61C9C9F6700B8F8F0 /* GreenScreenViewController.m */,
 				BF0345761CA8335F0056E5D7 /* ColourGameViewController.h */,
@@ -366,6 +371,7 @@
 				BFCA18B71C9C9F6700B8F8F0 /* GreenScreenViewController.m in Sources */,
 				BF0345781CA8335F0056E5D7 /* ColourGameViewController.m in Sources */,
 				BF03457B1CA83EE80056E5D7 /* AlphabetGameViewController.m in Sources */,
+				A019F0411CA84231005D4F71 /* MathViewController.m in Sources */,
 				BFB93F121C8CA10300B69F71 /* gameViewController.m in Sources */,
 				BF7BFB591C52CB6A0012B29D /* ViewController.m in Sources */,
 				BFB93F151C8CA10E00B69F71 /* QuizViewController.m in Sources */,

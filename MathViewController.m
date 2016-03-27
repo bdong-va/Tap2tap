@@ -1,22 +1,21 @@
 //
-//  AlphabetGameViewController.m
+//  MathViewController.m
 //  gameBeforeDishes
 //
-//  Created by bdong on 2016-03-27.
+//  Created by Graeme Judkins on 2016-03-27.
 //  Copyright © 2016 bdong. All rights reserved.
 //
 
-#import "AlphabetGameViewController.h"
+#import "MathViewController.h"
 #import "gameConst.h"
 
-@interface AlphabetGameViewController ()
+@interface MathViewController ()
 
 @end
 
-@implementation AlphabetGameViewController
+@implementation MathViewController
 {
     gameConst* puzzles;
-    NSString* currentAnswer;
 }
 
 
@@ -27,7 +26,7 @@
     gameSpeedValue = [[NSUserDefaults standardUserDefaults] floatForKey:@"gameSpeed"];
     gameSpeedValue = -4*gameSpeedValue;
     super.timerValue = 5 + gameSpeedValue;
-    super.gameInstruction = @"Is the Alphabet Order Correct?";
+    super.gameInstruction = @"Is This Equation Correct?";
     
     
     super.QuestionUp.textAlignment = NSTextAlignmentCenter;
@@ -43,17 +42,12 @@
     [super.AnswerUp setTransform:CGAffineTransformMakeRotation(-M_PI)];
     puzzles = [[gameConst alloc] init];
     [self generatePuzzle];
-    super.Timer = [NSTimer scheduledTimerWithTimeInterval:super.timerValue
-                                                   target:self
-                                                 selector:@selector(generatePuzzle)
-                                                 userInfo:nil
-                                                  repeats:NO];
 }
 
 - (void)generatePuzzle
 {
     [self animateProgressView2];
-    [self createNewPuzzlewith:[puzzles randomBoolWithYesPercentage:30]];
+    [self createNewPuzzlewith:[self randomBoolWithYesPercentage:30]];
     [super.Timer invalidate];
     super.Timer = [NSTimer scheduledTimerWithTimeInterval:super.timerValue
                                                    target:self
@@ -61,23 +55,63 @@
                                                  userInfo:nil
                                                   repeats:NO];
 }
-
 - (void)createNewPuzzlewith:(bool)isCorrect
 {
     if (isCorrect) {
         super.GoodTimeToPressButton = true;
-        currentAnswer = puzzles.correctAlphabet;
-        [self setAnswer:currentAnswer];
+        int firstNum = (arc4random_uniform(40));
+        int secondNum = (arc4random_uniform(40));
+        int sum;
+        NSString* sign;
+        if(arc4random_uniform(100) < 50)
+        {
+            sum = firstNum + secondNum;
+            sign = @" + ";
+        }
+        else
+        {
+            sum = firstNum - secondNum;
+            sign = @" - ";
+        }
+        NSString* question = [NSString stringWithFormat:@"%d%@%d = ", firstNum, sign, secondNum];
+        [self setQuestion:question];
+        NSString* answer = [NSString stringWithFormat:@"%d", sum];
+        [self setAnswer:answer];
     }
     else
     {
         super.GoodTimeToPressButton = false;
-        NSArray *theKeys = [puzzles.wrongAlphabet allKeys];
-        currentAnswer = [puzzles getRandomObjectFromArray:[NSMutableArray arrayWithArray:theKeys]];
-        [self setAnswer: currentAnswer];
+        int firstNum = (arc4random_uniform(40));
+        int secondNum = (arc4random_uniform(40));
+        int sum;
+        NSString* sign;
+        if(arc4random_uniform(100) < 50)
+        {
+            int randomOffset = arc4random_uniform(20)-10;
+            if (randomOffset == 0)
+            {
+                randomOffset ++;
+            }
+            sum = firstNum + secondNum + randomOffset;
+            sign = @" + ";
+        }
+        else
+        {
+            int randomOffset = arc4random_uniform(20)-10;
+            if (randomOffset == 0)
+            {
+                randomOffset ++;
+            }
+            sum = firstNum - secondNum + randomOffset;
+            sign = @" - ";
+        }
+        NSString* question = [NSString stringWithFormat:@"%d%@%d = ", firstNum, sign, secondNum];
+        [self setQuestion:question];
+        NSString* answer = [NSString stringWithFormat:@"%d", sum];
+        [self setAnswer:answer];
+        
     }
 }
-
 
 - (BOOL)isGoodTime
 {
@@ -125,13 +159,8 @@
     super.Time = super.timerValue;
 }
 
--(void)showAnswer
+-(BOOL)randomBoolWithYesPercentage:(int) percentage
 {
-    if(!self.isGoodTime)
-    {
-        NSString* wrongAnswer = [puzzles.wrongAlphabet objectForKey:currentAnswer];
-        [self setAnswer:wrongAnswer];
-    }
+    return arc4random_uniform(100) < percentage;
 }
-
 @end
