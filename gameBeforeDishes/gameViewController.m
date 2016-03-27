@@ -17,6 +17,7 @@ gameConst* constString;
 EmbedGameViewController* capitalAndCountry;
 EmbedGameViewController* greenScreen;
 EmbedGameViewController* CDGVC;
+EmbedGameViewController* colourGame;
 NSMutableArray* gameList;
 NSMutableArray* unplayedGameList;
 int currentGamePlayed;
@@ -45,11 +46,13 @@ bool buttonLock;
     capitalAndCountry = [self.storyboard instantiateViewControllerWithIdentifier:@"capitalAndCountry"];
     greenScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"greenScreenGame"];
     CDGVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CDGVC"];
+    colourGame = [self.storyboard instantiateViewControllerWithIdentifier:@"colourGame"];
+
     self.currentVC = capitalAndCountry;
     
 //    [self addChildViewController:capitalAndCountry];
 //    [self addChildViewController:greenScreen];
-    gameList = [NSMutableArray arrayWithObjects:capitalAndCountry,CDGVC, greenScreen, nil];
+    gameList = [NSMutableArray arrayWithObjects:capitalAndCountry, colourGame, CDGVC, greenScreen, nil];
     unplayedGameList = [[NSMutableArray alloc] initWithArray:gameList];
     
     [self updateScoreLabels];

@@ -24,6 +24,15 @@
                            @"BLUE": [self convertColorToString: [UIColor blueColor]],
                            @"RED": [self convertColorToString: [UIColor redColor]],
                            @"BLACK": [self convertColorToString: [UIColor blackColor]],
+                           @"YELLOW": [self convertColorToString: [UIColor yellowColor]],
+                           @"PURPLE": [self convertColorToString: [UIColor purpleColor]],
+                           @"ORANGE": [self convertColorToString: [UIColor orangeColor]],
+                           @"GRAY": [self convertColorToString: [UIColor grayColor]],
+                           @"WHITE": [self convertColorToString: [UIColor whiteColor]],
+                           @"BROWN": [self convertColorToString: [UIColor brownColor]],
+                           @"CYAN": [self convertColorToString: [UIColor cyanColor]],
+                           @"GREEN": [self convertColorToString: [UIColor greenColor]],
+                           
                            };
         self.capitalAndState = @{
                                  @"Beijing":@"China",
@@ -109,6 +118,16 @@
     //NSLog(@"color name :%@",color);
     return color;
 }
+
+- (UIColor *)getRandomColorFromDict :(NSDictionary *)dicname
+{
+    NSString* keyname = [self getRandomKeyfromDict:dicname];
+    CIColor *coreColor = [CIColor colorWithString:[dicname valueForKey:keyname]];
+    UIColor *color = [UIColor colorWithRed:coreColor.red green:coreColor.green blue:coreColor.blue alpha:coreColor.alpha];
+    //NSLog(@"color name :%@",color);
+    return color;
+}
+
 
 -(BOOL)randomBoolWithYesPercentage:(int) percentage
 {

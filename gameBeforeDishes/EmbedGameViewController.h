@@ -12,6 +12,7 @@
 
 @property BOOL GoodTimeToPressButton;
 @property float Time;
+@property float timerValue;
 @property NSTimer* Timer;
 @property NSTimer* countdownTimer;
 @property NSString* gameInstruction;
