@@ -16,10 +16,10 @@
     self = [super init];
     
     if (self) {
-        self.PositiveLostText = [NSMutableArray arrayWithObjects:@"Bad One!",@"Wrong!", nil];
+        self.PositiveLostText = [NSMutableArray arrayWithObjects:@"Nope!",@"Wrong!", nil];
         self.PositiveWinText = [NSMutableArray arrayWithObjects:@"Awesome!",@"Got it!", nil];
-        self.NegativeWinText = [NSMutableArray arrayWithObjects:@"Ha!",@"wow!", nil];
-        self.NegativeLostText = [NSMutableArray arrayWithObjects:@"too Slow!",@"Next Time!", nil];
+        self.NegativeWinText = [NSMutableArray arrayWithObjects:@"Ha!",@"Correct!", nil];
+        self.NegativeLostText = [NSMutableArray arrayWithObjects:@"Too Slow!",@"Next Time!", nil];
         self.ColorList = @{
                            @"BLUE": [self convertColorToString: [UIColor blueColor]],
                            @"RED": [self convertColorToString: [UIColor redColor]],

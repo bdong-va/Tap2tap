@@ -41,6 +41,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBarHidden = NO;
     self.title = @"Custom Game Options";
     
     // Make sure all labels display proper values based on user defaults
@@ -56,7 +57,11 @@
     _pointStepper.value = [[NSUserDefaults standardUserDefaults] integerForKey:@"maxPoints"];
     
     [self pointStepperClicked:_pointStepper];
-                                  
+    
+    // styling status bar
+//
+//    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:0.001]];
+    
     
     
 }

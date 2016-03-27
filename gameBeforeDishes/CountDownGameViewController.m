@@ -12,10 +12,10 @@
 
 @end
 
-NSTimer* timer;
 float a;
 NSTimer* fastTimer;
 int iterations;
+float x;
 
 @implementation CountDownGameViewController
 
@@ -27,13 +27,17 @@ int iterations;
     UILabel* lab = [super QuestionDown];
     [lab setTransform:CGAffineTransformMakeRotation(-M_PI)];
     
+
+    
 }
 
 -(void) startGame{
     super.GoodTimeToPressButton = NO;
     [fastTimer invalidate];
     a = 1.00;
-    _countdownNumber = 9;
+    _countdownNumber = 4;
+    _countdownNumber = _countdownNumber + arc4random_uniform(5);
+    x = _countdownNumber;
     iterations = 0;
     super.QuestionUp.alpha = 1;
     super.QuestionDown.alpha = 1;
@@ -48,17 +52,17 @@ int iterations;
                                             repeats:YES];
 }
 
--(void) callTimer{
-    fastTimer = [NSTimer scheduledTimerWithTimeInterval:0.1
-                                                 target:self
-                                               selector:@selector(alp)
-                                               userInfo:nil
-                                                repeats:YES];
-}
+//-(void) callTimer{
+//    fastTimer = [NSTimer scheduledTimerWithTimeInterval:0.1
+//                                                 target:self
+//                                               selector:@selector(alp)
+//                                               userInfo:nil
+//                                                repeats:YES];
+//}
 
 - (void) tick{
     if (_countdownNumber <=0){
-        [timer invalidate];
+        [super.Timer invalidate];
         [fastTimer invalidate];
         super.GoodTimeToPressButton = YES;
     }
@@ -66,10 +70,13 @@ int iterations;
     super.QuestionUp.text = [NSMutableString stringWithFormat:@"%d", _countdownNumber];
     super.QuestionDown.text = [NSMutableString stringWithFormat:@"%d", _countdownNumber];
     _countdownNumber--;
-    iterations ++;
-    if (iterations == 2){
-        [self callTimer];
-    }
+    
+    a = a - ((1/x) +0.1);
+    super.QuestionUp.alpha = (a);
+    super.QuestionDown.alpha = (a);
+    NSLog([NSMutableString stringWithFormat:@"%f", a]);
+    
+    
 
 }
 
