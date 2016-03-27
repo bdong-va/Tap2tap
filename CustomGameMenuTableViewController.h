@@ -24,5 +24,10 @@
 @property (weak, nonatomic) IBOutlet UIStepper *pointStepper;
 @property (weak, nonatomic) IBOutlet UILabel *gameSpeedLabel;
 @property (weak, nonatomic) IBOutlet UISwitch *shuffleOrderSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *roundsPerMingameLabel;
+- (IBAction)roundsPerMiniStepper:(id)sender;
+@property (weak, nonatomic) IBOutlet UIStepper *roundsStepper;
+
+
 @end
 

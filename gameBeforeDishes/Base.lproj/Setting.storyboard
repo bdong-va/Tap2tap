@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wS5-EI-md3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wS5-EI-md3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Custom Game Settings-->
@@ -17,28 +17,8 @@
                         <sections>
                             <tableViewSection id="XEi-5f-5i7">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="OlH-Yn-Qbn">
-                                        <rect key="frame" x="0.0" y="99" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OlH-Yn-Qbn" id="IjL-Di-ES7">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change Player's Names" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8F1-oh-OIq">
-                                                    <rect key="frame" x="8" y="0.0" width="398" height="43"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                                    <color key="textColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.48627450979999998" green="0.29803921570000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <segue destination="wp4-UC-o5a" kind="show" id="9Mi-Gz-Sj9"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rgl-r6-Ocz">
-                                        <rect key="frame" x="0.0" y="143" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="99" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rgl-r6-Ocz" id="gnD-9m-qLY">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
@@ -52,7 +32,6 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tce-MT-41L">
                                                     <rect key="frame" x="357" y="6" width="51" height="31"/>
-                                                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="onTintColor" red="0.92549019610000005" green="0.54901960780000003" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="shuffleSwitch:" destination="wS5-EI-md3" eventType="valueChanged" id="5ag-pg-Arr"/>
@@ -62,15 +41,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.48627450979999998" green="0.29803921570000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="88G-Ce-6Pn">
-                                        <rect key="frame" x="0.0" y="187" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="88G-Ce-6Pn">
+                                        <rect key="frame" x="0.0" y="143" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="88G-Ce-6Pn" id="jaV-0V-9ly">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Minigames" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94c-ZL-vh2">
-                                                    <rect key="frame" x="8" y="0.0" width="398" height="43"/>
+                                                    <rect key="frame" x="8" y="0.0" width="329" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -83,7 +62,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9rq-nk-ju6">
-                                        <rect key="frame" x="0.0" y="231" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="187" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9rq-nk-ju6" id="RbF-Pb-lv1">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
@@ -109,7 +88,7 @@
                                         <color key="backgroundColor" red="0.48627450979999998" green="0.29803921570000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wot-U1-LOg">
-                                        <rect key="frame" x="0.0" y="275" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="231" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wot-U1-LOg" id="ctS-6M-QOW">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
@@ -123,9 +102,34 @@
                                                 </label>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minimumValue="5" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="VfM-vO-lZc">
                                                     <rect key="frame" x="312" y="7" width="94" height="29"/>
-                                                    <color key="tintColor" red="0.48627450979999998" green="0.29803921570000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="pointStepperClicked:" destination="wS5-EI-md3" eventType="valueChanged" id="LAo-tf-XXZ"/>
+                                                    </connections>
+                                                </stepper>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.48627450979999998" green="0.29803921570000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7fN-uu-7kP">
+                                        <rect key="frame" x="0.0" y="275" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7fN-uu-7kP" id="VFD-gg-tgF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rounds per Minigame: 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0y-IV-2fq">
+                                                    <rect key="frame" x="8" y="0.0" width="280" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                    <color key="textColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="s4P-zw-pqu">
+                                                    <rect key="frame" x="312" y="7" width="94" height="29"/>
+                                                    <color key="tintColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <action selector="pointStepperClicked:" destination="wS5-EI-md3" eventType="valueChanged" id="Nfw-c1-SFS"/>
+                                                        <action selector="roundsPerMiniStepper:" destination="wS5-EI-md3" eventType="valueChanged" id="5vf-QR-RO0"/>
                                                     </connections>
                                                 </stepper>
                                             </subviews>
@@ -171,6 +175,8 @@
                         <outlet property="gameSpeedLabel" destination="THj-dK-Pyg" id="jf6-c4-iKA"/>
                         <outlet property="pointStepper" destination="VfM-vO-lZc" id="z4r-y7-Tb9"/>
                         <outlet property="pointsLabel" destination="Oc2-Da-i4d" id="UvF-Bc-xeH"/>
+                        <outlet property="roundsPerMingameLabel" destination="N0y-IV-2fq" id="uf8-8c-dAH"/>
+                        <outlet property="roundsStepper" destination="s4P-zw-pqu" id="AOH-Nk-MIO"/>
                         <outlet property="shuffleOrderSwitch" destination="tce-MT-41L" id="hNB-0x-Miw"/>
                         <outlet property="slider" destination="Unw-eC-Vv5" id="Lcz-yc-wze"/>
                     </connections>
@@ -183,34 +189,22 @@
         <scene sceneID="CIV-Gz-fvE">
             <objects>
                 <tableViewController id="qp1-7Y-vlN" customClass="GameListUITableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wQN-2s-VRd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wQN-2s-VRd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameNameCells" id="Hkc-D4-Hug">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameNameCells" id="QkZ-Wo-KFv">
                                 <rect key="frame" x="0.0" y="92" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hkc-D4-Hug" id="N5d-R2-Z2w">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Top" id="QkZ-Wo-KFv">
-                                <rect key="frame" x="0.0" y="136" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QkZ-Wo-KFv" id="4wz-bj-leW">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5u-wS-ZYM">
-                                            <rect key="frame" x="8" y="11" width="265" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.48627450979999998" green="0.29803921570000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -221,27 +215,27 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Flg-Rc-nf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1605" y="1692"/>
+            <point key="canvasLocation" x="1110" y="1523"/>
         </scene>
         <!--Players NamesUI Table View Controller-->
         <scene sceneID="YgR-5x-oQN">
             <objects>
                 <tableViewController id="wp4-UC-o5a" customClass="PlayersNamesUITableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Sux-IP-OUt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="labelCell" id="Lel-T1-tR0" customClass="textfieldTableViewCell">
-                                <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lel-T1-tR0" id="L4U-gO-8yL">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VSP-M9-MZW" userLabel="PlayerNameTextField">
                                             <rect key="frame" x="8" y="7" width="304" height="30"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
                                                 <action selector="cellTouched:" destination="Lel-T1-tR0" eventType="touchUpInside" id="kqH-Me-saj"/>
@@ -249,6 +243,7 @@
                                         </textField>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.48627450979999998" green="0.29803921570000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="textField" destination="VSP-M9-MZW" id="5TK-PQ-Hsl"/>
                                 </connections>
