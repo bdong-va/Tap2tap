@@ -72,8 +72,8 @@ NSMutableArray* players;
     cell = [tableView dequeueReusableCellWithIdentifier:@"labelCell" forIndexPath:indexPath];
     cell.textField.hidden = YES;
     cell.textLabel.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"namesOfPlayers"] objectAtIndex:indexPath.row];
-    cell.textField.font = [UIFont fontWithName:@"menlo" size:17];
-    cell.textLabel.font = [UIFont fontWithName:@"menlo" size:17];
+    //cell.textField.font = [UIFont fontWithName:@"menlo" size:17];
+
     return cell;
 }
 

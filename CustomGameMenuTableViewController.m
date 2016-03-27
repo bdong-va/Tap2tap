@@ -99,6 +99,12 @@
 }
 - (IBAction)pointStepperClicked:(id)sender {
     _pointsLabel.text = [NSMutableString stringWithFormat:@"Points to Win Game: %ld", (NSInteger) _pointStepper.value];
+    
     [[NSUserDefaults standardUserDefaults] setInteger:(NSInteger)_pointStepper.value forKey:@"maxPoints"];
+}
+- (IBAction)roundsPerMiniStepper:(id)sender {
+    _roundsPerMingameLabel.text = [NSMutableString stringWithFormat:@"Rounds per Minigame: %ld", (NSInteger) _roundsStepper.value];
+    
+    [[NSUserDefaults standardUserDefaults] setInteger:(NSInteger)_roundsStepper.value forKey:@"roundsPerMiniGame"];
 }
 @end

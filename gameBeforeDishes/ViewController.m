@@ -21,6 +21,8 @@ NSArray* listOfSelectedMiniGames;
 float gameSpeed;
 NSInteger maxPoints;
 NSDictionary* defaultUserDefaults;
+NSInteger roundsPerMiniGame;
+NSDictionary* miniGameList;
 
 
 
@@ -34,6 +36,11 @@ NSDictionary* defaultUserDefaults;
         
         numberOfPlayers = 2;
         _namesOfPlayers = [[NSMutableArray alloc] init];
+        
+        miniGameList = [[NSDictionary alloc] init];
+        [miniGameList setValue:[NSNumber numberWithBool:YES] forKey:@"game1"];
+        [miniGameList setValue:[NSNumber numberWithBool:YES] forKey:@"game1"];
+        [miniGameList setValue:[NSNumber numberWithBool:YES] forKey:@"game1"];
 
         [_namesOfPlayers addObject:@"Player 1"];
         [_namesOfPlayers addObject:@"Player 2"];
@@ -41,6 +48,7 @@ NSDictionary* defaultUserDefaults;
         listOfSelectedMiniGames = @[@"game1", @"game2", @"game3"];
         gameSpeed = 0.5;
         maxPoints = 50;
+        roundsPerMiniGame = 3;
         
         [[NSUserDefaults standardUserDefaults] setObject:_namesOfPlayers forKey:@"namesOfPlayers"];
         [[NSUserDefaults standardUserDefaults] setInteger:numberOfPlayers forKey:@"numberOfPlayers"];
@@ -48,6 +56,7 @@ NSDictionary* defaultUserDefaults;
         [[NSUserDefaults standardUserDefaults] setBool:shuffleGameOrder forKey:@"shuffleGameOrder"];
         [[NSUserDefaults standardUserDefaults] setFloat:gameSpeed forKey:@"gameSpeed"];
         [[NSUserDefaults standardUserDefaults] setInteger:maxPoints forKey:@"maxPoints"];
+        [[NSUserDefaults standardUserDefaults] setInteger:roundsPerMiniGame forKey:@"roundsPerMiniGame"];
    }
 
     [[NSUserDefaults standardUserDefaults] synchronize];
