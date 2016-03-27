@@ -101,7 +101,6 @@ bool buttonLock;
     }
     EmbedGameViewController* thisGame = unplayedGameList[0];
     
-    NSLog(@"%@", thisGame);
     [self addChildViewController:thisGame];
     thisGame.view.frame = self.containerViewB.bounds;
     [self moveToNewController:thisGame];
@@ -115,6 +114,11 @@ bool buttonLock;
                                 [self.currentVC removeFromParentViewController];
                                 [newController didMoveToParentViewController:self];
                                 self.currentVC = newController;
+                                for (UIButton *button  in _buttonList) {
+                                    //TODO set back to button's name
+                                    [button setTitle:[_currentVC getGameInstruction] forState:UIControlStateNormal];
+                                    [button setBackgroundColor:normalColor];
+                                }
                             }];
 }
 
@@ -190,6 +194,15 @@ bool buttonLock;
     self.containerViewB.hidden = false;
 
 //    self.containerViewB.alpha = 1;
+}
+
+- (IBAction)popBackMenu:(id)sender
+{
+    if (self.navigationController.navigationBar.hidden) {
+        self.navigationController.navigationBar.hidden = NO;
+    }else{
+        self.navigationController.navigationBar.hidden = YES;
+    }
 }
 
 
