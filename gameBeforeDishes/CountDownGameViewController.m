@@ -74,10 +74,6 @@ float x;
     a = a - ((1/x) +0.1);
     super.QuestionUp.alpha = (a);
     super.QuestionDown.alpha = (a);
-    NSLog([NSMutableString stringWithFormat:@"%f", a]);
-    
-    
-
 }
 
 -(void) alp{

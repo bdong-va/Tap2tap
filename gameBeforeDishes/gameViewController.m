@@ -23,7 +23,7 @@ EmbedGameViewController* mathGame;
 NSMutableArray* gameList;
 NSMutableArray* unplayedGameList;
 int currentGamePlayed;
-int gameMaxShouldPlayed;
+int gameRoundsPerMiniGame;
 int totalScoreLimit;
 bool buttonLock;
 
@@ -32,7 +32,7 @@ bool buttonLock;
 - (void)viewDidLoad {
     [super viewDidLoad];
     currentGamePlayed = 0;
-    gameMaxShouldPlayed = 5;
+    gameRoundsPerMiniGame = [[NSUserDefaults standardUserDefaults] integerForKey:@"roundsPerMiniGame"];
     totalScoreLimit = [[NSUserDefaults standardUserDefaults] integerForKey:@"maxPoints"];
     buttonLock = false;
     self.navigationController.navigationBar.hidden = YES;
@@ -207,7 +207,6 @@ bool buttonLock;
 - (IBAction)popBackMenu:(id)sender
 {
     if (self.navigationController.navigationBar.hidden) {
-        NSLog(@"hidden");
         [[self navigationController] setNavigationBarHidden:NO animated:YES];
         self.navigationController.navigationBar.hidden = NO;
     }else{
@@ -220,7 +219,7 @@ bool buttonLock;
 - (void)UpdateGameStatus
 {
     currentGamePlayed++;
-    if (currentGamePlayed > gameMaxShouldPlayed) {
+    if (currentGamePlayed > gameRoundsPerMiniGame) {
         currentGamePlayed = 0;
         [self SwitchControllers];
     }
