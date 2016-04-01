@@ -32,6 +32,7 @@ bool randomGame;
     randomGame = [[NSUserDefaults standardUserDefaults] boolForKey:@"shuffleGameOrder"];
     buttonLock = false;
     self.navigationController.navigationBar.hidden = YES;
+    self.navigationController.toolbarHidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
     self.buttonList = [NSMutableArray arrayWithObjects:_button1,_button2,_button3,_button4, nil];
     self.scoreLabelList = [NSMutableArray arrayWithObjects:_ScoreLabel1,_ScoreLabel2,_ScoreLabel3,_ScoreLabel4, nil];
@@ -41,7 +42,7 @@ bool randomGame;
     self.scoreList[2]=@0;
     self.scoreList[3]=@0;
     //setting up games.
-    gameList = [NSMutableArray arrayWithObjects: @"greenScreenGame", @"capitalAndCountry", @"CDGVC", @"colourGame", @"alphabetGame", @"mathGame", nil];
+    gameList = [NSMutableArray arrayWithObjects:@"capitalAndCountry", @"greenScreenGame", @"CDGVC", @"colourGame", @"alphabetGame", @"mathGame", nil];
     unplayedGameList = [[NSMutableArray alloc] initWithArray:gameList];
     
     [self updateScoreLabels];
