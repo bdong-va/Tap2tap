@@ -14,18 +14,13 @@ UIColor* lostColor;
 UIColor* normalColor;
 
 gameConst* constString;
-EmbedGameViewController* capitalAndCountry;
-EmbedGameViewController* greenScreen;
-EmbedGameViewController* CDGVC;
-EmbedGameViewController* colourGame;
-EmbedGameViewController* alphabetGame;
-EmbedGameViewController* mathGame;
 NSMutableArray* gameList;
 NSMutableArray* unplayedGameList;
 int currentGamePlayed;
 int gameRoundsPerMiniGame;
 int totalScoreLimit;
 bool buttonLock;
+bool randomGame;
 
 @implementation gameViewController
 
@@ -34,6 +29,7 @@ bool buttonLock;
     currentGamePlayed = 0;
     gameRoundsPerMiniGame = [[NSUserDefaults standardUserDefaults] integerForKey:@"roundsPerMiniGame"];
     totalScoreLimit = [[NSUserDefaults standardUserDefaults] integerForKey:@"maxPoints"];
+    randomGame = [[NSUserDefaults standardUserDefaults] boolForKey:@"shuffleGameOrder"];
     buttonLock = false;
     self.navigationController.navigationBar.hidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
@@ -45,18 +41,7 @@ bool buttonLock;
     self.scoreList[2]=@0;
     self.scoreList[3]=@0;
     //setting up games.
-    capitalAndCountry = [self.storyboard instantiateViewControllerWithIdentifier:@"capitalAndCountry"];
-    greenScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"greenScreenGame"];
-    CDGVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CDGVC"];
-    colourGame = [self.storyboard instantiateViewControllerWithIdentifier:@"colourGame"];
-    alphabetGame = [self.storyboard instantiateViewControllerWithIdentifier:@"alphabetGame"];
-    mathGame = [self.storyboard instantiateViewControllerWithIdentifier:@"mathGame"];
-
-    self.currentVC = capitalAndCountry;
-    
-//    [self addChildViewController:capitalAndCountry];
-//    [self addChildViewController:greenScreen];
-    gameList = [NSMutableArray arrayWithObjects:capitalAndCountry, mathGame, alphabetGame, colourGame, CDGVC, greenScreen, nil];
+    gameList = [NSMutableArray arrayWithObjects: @"greenScreenGame", @"capitalAndCountry", @"CDGVC", @"colourGame", @"alphabetGame", @"mathGame", nil];
     unplayedGameList = [[NSMutableArray alloc] initWithArray:gameList];
     
     [self updateScoreLabels];
@@ -70,9 +55,7 @@ bool buttonLock;
     _button3.hidden = true;
     _button4.hidden = true;
     [self showViewB];
-    self.initialVC = self.childViewControllers.lastObject;
-    self.substituteVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CDGVC"];
-    self.currentVC = self.initialVC;
+    self.currentVC = self.childViewControllers.lastObject;
     
     [self SwitchControllers];
     [self resetButtonStatus];
@@ -107,11 +90,12 @@ bool buttonLock;
     if ([unplayedGameList count] == 0) {
         unplayedGameList = [[NSMutableArray alloc] initWithArray:gameList];
     }
-    EmbedGameViewController* thisGame = unplayedGameList[0];
+    NSString* thisGame = unplayedGameList[0];
+    EmbedGameViewController* thisGameVC = [self.storyboard instantiateViewControllerWithIdentifier:unplayedGameList[0]];
     
-    [self addChildViewController:thisGame];
-    thisGame.view.frame = self.containerViewB.bounds;
-    [self moveToNewController:thisGame];
+    [self addChildViewController:thisGameVC];
+    thisGameVC.view.frame = self.containerViewB.bounds;
+    [self moveToNewController:thisGameVC];
     [unplayedGameList removeObject: thisGame];
 }
 
