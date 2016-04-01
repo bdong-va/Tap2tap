@@ -207,8 +207,11 @@ bool buttonLock;
 - (IBAction)popBackMenu:(id)sender
 {
     if (self.navigationController.navigationBar.hidden) {
+        NSLog(@"hidden");
+        [[self navigationController] setNavigationBarHidden:NO animated:YES];
         self.navigationController.navigationBar.hidden = NO;
     }else{
+        [[self navigationController] setNavigationBarHidden:YES animated:YES];
         self.navigationController.navigationBar.hidden = YES;
     }
 }
