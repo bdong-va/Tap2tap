@@ -29,7 +29,6 @@
 		BFB93F151C8CA10E00B69F71 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB93F141C8CA10E00B69F71 /* QuizViewController.m */; };
 		BFB93F181C8CA13400B69F71 /* gameConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB93F171C8CA13400B69F71 /* gameConst.m */; };
 		BFCA18B71C9C9F6700B8F8F0 /* GreenScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCA18B61C9C9F6700B8F8F0 /* GreenScreenViewController.m */; };
-		BFCA37D01CAF1CD2009979F8 /* Kanizsa_triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = BFCA37CF1CAF1CD2009979F8 /* Kanizsa_triangle.png */; };
 		D32899FF1C952A9E005A3177 /* PointChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D32899FE1C952A9E005A3177 /* PointChooserViewController.m */; };
 		D331038D1C98840E007D1DC8 /* labelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D331038C1C98840E007D1DC8 /* labelCell.xib */; };
 		D33103901C9884E2007D1DC8 /* textfieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D331038F1C9884E2007D1DC8 /* textfieldTableViewCell.m */; };
@@ -67,7 +66,7 @@
 		BF1A17EC1CA0CE110032DD73 /* skylineU.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skylineU.png; sourceTree = "<group>"; };
 		BF72CCF51C95C41900ECBC36 /* EmbedGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmbedGameViewController.h; sourceTree = "<group>"; };
 		BF72CCF61C95C41900ECBC36 /* EmbedGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmbedGameViewController.m; sourceTree = "<group>"; };
-		BF7BFB4E1C52CB6A0012B29D /* gameBeforeDishes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gameBeforeDishes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7BFB4E1C52CB6A0012B29D /* Tap2Tap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tap2Tap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7BFB521C52CB6A0012B29D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF7BFB541C52CB6A0012B29D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BF7BFB551C52CB6A0012B29D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,10 +77,10 @@
 		BF7BFB601C52CB6B0012B29D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF7BFB631C52CB6B0012B29D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF7BFB651C52CB6B0012B29D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF7BFB6A1C52CB6B0012B29D /* gameBeforeDishesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gameBeforeDishesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7BFB6A1C52CB6B0012B29D /* Tap2Tap.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tap2Tap.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7BFB6E1C52CB6B0012B29D /* gameBeforeDishesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gameBeforeDishesTests.m; sourceTree = "<group>"; };
 		BF7BFB701C52CB6B0012B29D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF7BFB751C52CB6B0012B29D /* gameBeforeDishesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gameBeforeDishesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7BFB751C52CB6B0012B29D /* Tap2Tap.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tap2Tap.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7BFB791C52CB6B0012B29D /* gameBeforeDishesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gameBeforeDishesUITests.m; sourceTree = "<group>"; };
 		BF7BFB7B1C52CB6B0012B29D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFA5D16E1C95B35F006822A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Setting.storyboard; sourceTree = "<group>"; };
@@ -95,7 +94,6 @@
 		BFB93F171C8CA13400B69F71 /* gameConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameConst.m; sourceTree = "<group>"; };
 		BFCA18B51C9C9F6700B8F8F0 /* GreenScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenScreenViewController.h; sourceTree = "<group>"; };
 		BFCA18B61C9C9F6700B8F8F0 /* GreenScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenScreenViewController.m; sourceTree = "<group>"; };
-		BFCA37CF1CAF1CD2009979F8 /* Kanizsa_triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Kanizsa_triangle.png; path = ../../../Downloads/Kanizsa_triangle.png; sourceTree = "<group>"; };
 		D32899FD1C952A9E005A3177 /* PointChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointChooserViewController.h; sourceTree = "<group>"; };
 		D32899FE1C952A9E005A3177 /* PointChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointChooserViewController.m; sourceTree = "<group>"; };
 		D331038C1C98840E007D1DC8 /* labelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = labelCell.xib; path = ../labelCell.xib; sourceTree = "<group>"; };
@@ -149,9 +147,9 @@
 		BF7BFB4F1C52CB6A0012B29D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF7BFB4E1C52CB6A0012B29D /* gameBeforeDishes.app */,
-				BF7BFB6A1C52CB6B0012B29D /* gameBeforeDishesTests.xctest */,
-				BF7BFB751C52CB6B0012B29D /* gameBeforeDishesUITests.xctest */,
+				BF7BFB4E1C52CB6A0012B29D /* Tap2Tap.app */,
+				BF7BFB6A1C52CB6B0012B29D /* Tap2Tap.xctest */,
+				BF7BFB751C52CB6B0012B29D /* Tap2Tap.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,7 +162,6 @@
 				D331038F1C9884E2007D1DC8 /* textfieldTableViewCell.m */,
 				BF1A17EA1CA0CD740032DD73 /* skyline.png */,
 				BF1A17EC1CA0CE110032DD73 /* skylineU.png */,
-				BFCA37CF1CAF1CD2009979F8 /* Kanizsa_triangle.png */,
 				BFB93F161C8CA13400B69F71 /* gameConst.h */,
 				BFB93F171C8CA13400B69F71 /* gameConst.m */,
 				BFB93F101C8CA10300B69F71 /* gameViewController.h */,
@@ -237,9 +234,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF7BFB4D1C52CB6A0012B29D /* gameBeforeDishes */ = {
+		BF7BFB4D1C52CB6A0012B29D /* Tap2Tap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF7BFB7E1C52CB6B0012B29D /* Build configuration list for PBXNativeTarget "gameBeforeDishes" */;
+			buildConfigurationList = BF7BFB7E1C52CB6B0012B29D /* Build configuration list for PBXNativeTarget "Tap2Tap" */;
 			buildPhases = (
 				BF7BFB4A1C52CB6A0012B29D /* Sources */,
 				BF7BFB4B1C52CB6A0012B29D /* Frameworks */,
@@ -249,14 +246,14 @@
 			);
 			dependencies = (
 			);
-			name = gameBeforeDishes;
+			name = Tap2Tap;
 			productName = gameBeforeDishes;
-			productReference = BF7BFB4E1C52CB6A0012B29D /* gameBeforeDishes.app */;
+			productReference = BF7BFB4E1C52CB6A0012B29D /* Tap2Tap.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BF7BFB691C52CB6B0012B29D /* gameBeforeDishesTests */ = {
+		BF7BFB691C52CB6B0012B29D /* Tap2TapTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF7BFB811C52CB6B0012B29D /* Build configuration list for PBXNativeTarget "gameBeforeDishesTests" */;
+			buildConfigurationList = BF7BFB811C52CB6B0012B29D /* Build configuration list for PBXNativeTarget "Tap2TapTests" */;
 			buildPhases = (
 				BF7BFB661C52CB6B0012B29D /* Sources */,
 				BF7BFB671C52CB6B0012B29D /* Frameworks */,
@@ -267,14 +264,14 @@
 			dependencies = (
 				BF7BFB6C1C52CB6B0012B29D /* PBXTargetDependency */,
 			);
-			name = gameBeforeDishesTests;
+			name = Tap2TapTests;
 			productName = gameBeforeDishesTests;
-			productReference = BF7BFB6A1C52CB6B0012B29D /* gameBeforeDishesTests.xctest */;
+			productReference = BF7BFB6A1C52CB6B0012B29D /* Tap2Tap.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BF7BFB741C52CB6B0012B29D /* gameBeforeDishesUITests */ = {
+		BF7BFB741C52CB6B0012B29D /* Tap2TapUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF7BFB841C52CB6B0012B29D /* Build configuration list for PBXNativeTarget "gameBeforeDishesUITests" */;
+			buildConfigurationList = BF7BFB841C52CB6B0012B29D /* Build configuration list for PBXNativeTarget "Tap2TapUITests" */;
 			buildPhases = (
 				BF7BFB711C52CB6B0012B29D /* Sources */,
 				BF7BFB721C52CB6B0012B29D /* Frameworks */,
@@ -285,9 +282,9 @@
 			dependencies = (
 				BF7BFB771C52CB6B0012B29D /* PBXTargetDependency */,
 			);
-			name = gameBeforeDishesUITests;
+			name = Tap2TapUITests;
 			productName = gameBeforeDishesUITests;
-			productReference = BF7BFB751C52CB6B0012B29D /* gameBeforeDishesUITests.xctest */;
+			productReference = BF7BFB751C52CB6B0012B29D /* Tap2Tap.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -301,6 +298,7 @@
 				TargetAttributes = {
 					BF7BFB4D1C52CB6A0012B29D = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 8HM23K78EB;
 					};
 					BF7BFB691C52CB6B0012B29D = {
 						CreatedOnToolsVersion = 7.2;
@@ -312,7 +310,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BF7BFB491C52CB6A0012B29D /* Build configuration list for PBXProject "gameBeforeDishes" */;
+			buildConfigurationList = BF7BFB491C52CB6A0012B29D /* Build configuration list for PBXProject "Tap2Tap" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -325,9 +323,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BF7BFB4D1C52CB6A0012B29D /* gameBeforeDishes */,
-				BF7BFB691C52CB6B0012B29D /* gameBeforeDishesTests */,
-				BF7BFB741C52CB6B0012B29D /* gameBeforeDishesUITests */,
+				BF7BFB4D1C52CB6A0012B29D /* Tap2Tap */,
+				BF7BFB691C52CB6B0012B29D /* Tap2TapTests */,
+				BF7BFB741C52CB6B0012B29D /* Tap2TapUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -342,7 +340,6 @@
 				BFA5D1711C95B37F006822A7 /* Purchase.storyboard in Resources */,
 				BF7BFB611C52CB6B0012B29D /* Assets.xcassets in Resources */,
 				D331038D1C98840E007D1DC8 /* labelCell.xib in Resources */,
-				BFCA37D01CAF1CD2009979F8 /* Kanizsa_triangle.png in Resources */,
 				BF1A17EB1CA0CD740032DD73 /* skyline.png in Resources */,
 				BF1A17ED1CA0CE110032DD73 /* skylineU.png in Resources */,
 				BF7BFB5C1C52CB6B0012B29D /* Main.storyboard in Resources */,
@@ -413,12 +410,12 @@
 /* Begin PBXTargetDependency section */
 		BF7BFB6C1C52CB6B0012B29D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BF7BFB4D1C52CB6A0012B29D /* gameBeforeDishes */;
+			target = BF7BFB4D1C52CB6A0012B29D /* Tap2Tap */;
 			targetProxy = BF7BFB6B1C52CB6B0012B29D /* PBXContainerItemProxy */;
 		};
 		BF7BFB771C52CB6B0012B29D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BF7BFB4D1C52CB6A0012B29D /* gameBeforeDishes */;
+			target = BF7BFB4D1C52CB6A0012B29D /* Tap2Tap */;
 			targetProxy = BF7BFB761C52CB6B0012B29D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -545,10 +542,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = gameBeforeDishes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dicebota.gameBeforeDishes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tap2Tap;
 			};
 			name = Debug;
 		};
@@ -556,10 +554,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = gameBeforeDishes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dicebota.gameBeforeDishes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tap2Tap;
 			};
 			name = Release;
 		};
@@ -570,8 +569,8 @@
 				INFOPLIST_FILE = gameBeforeDishesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dicebota.gameBeforeDishesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gameBeforeDishes.app/gameBeforeDishes";
+				PRODUCT_NAME = Tap2Tap;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tap2Tap.app/Tap2Tap";
 			};
 			name = Debug;
 		};
@@ -582,8 +581,8 @@
 				INFOPLIST_FILE = gameBeforeDishesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dicebota.gameBeforeDishesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gameBeforeDishes.app/gameBeforeDishes";
+				PRODUCT_NAME = Tap2Tap;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tap2Tap.app/Tap2Tap";
 			};
 			name = Release;
 		};
@@ -593,7 +592,7 @@
 				INFOPLIST_FILE = gameBeforeDishesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dicebota.gameBeforeDishesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tap2Tap;
 				TEST_TARGET_NAME = gameBeforeDishes;
 				USES_XCTRUNNER = YES;
 			};
@@ -605,7 +604,7 @@
 				INFOPLIST_FILE = gameBeforeDishesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dicebota.gameBeforeDishesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tap2Tap;
 				TEST_TARGET_NAME = gameBeforeDishes;
 				USES_XCTRUNNER = YES;
 			};
@@ -614,7 +613,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF7BFB491C52CB6A0012B29D /* Build configuration list for PBXProject "gameBeforeDishes" */ = {
+		BF7BFB491C52CB6A0012B29D /* Build configuration list for PBXProject "Tap2Tap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF7BFB7C1C52CB6B0012B29D /* Debug */,
@@ -623,7 +622,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF7BFB7E1C52CB6B0012B29D /* Build configuration list for PBXNativeTarget "gameBeforeDishes" */ = {
+		BF7BFB7E1C52CB6B0012B29D /* Build configuration list for PBXNativeTarget "Tap2Tap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF7BFB7F1C52CB6B0012B29D /* Debug */,
@@ -632,7 +631,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF7BFB811C52CB6B0012B29D /* Build configuration list for PBXNativeTarget "gameBeforeDishesTests" */ = {
+		BF7BFB811C52CB6B0012B29D /* Build configuration list for PBXNativeTarget "Tap2TapTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF7BFB821C52CB6B0012B29D /* Debug */,
@@ -641,7 +640,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF7BFB841C52CB6B0012B29D /* Build configuration list for PBXNativeTarget "gameBeforeDishesUITests" */ = {
+		BF7BFB841C52CB6B0012B29D /* Build configuration list for PBXNativeTarget "Tap2TapUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF7BFB851C52CB6B0012B29D /* Debug */,

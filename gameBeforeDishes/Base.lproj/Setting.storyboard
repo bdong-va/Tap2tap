@@ -3,16 +3,19 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Custom Game Settings-->
         <scene sceneID="AuP-Ql-ePp">
             <objects>
                 <tableViewController title="Custom Game Settings" id="wS5-EI-md3" customClass="CustomGameMenuTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Qi0-xa-zbx">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Qi0-xa-zbx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.92549019610000005" green="0.54901960780000003" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <color key="sectionIndexBackgroundColor" red="0.48627450979999998" green="0.29803921570000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="XEi-5f-5i7">
@@ -24,13 +27,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shuffle Game Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yE1-mG-fvn">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Shuffle Game Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yE1-mG-fvn">
                                                     <rect key="frame" x="8" y="6" width="341" height="37"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                    </variation>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tce-MT-41L">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tce-MT-41L">
                                                     <rect key="frame" x="357" y="6" width="51" height="31"/>
                                                     <color key="onTintColor" red="0.92549019610000005" green="0.54901960780000003" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
@@ -38,6 +44,12 @@
                                                     </connections>
                                                 </switch>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="leadingMargin" secondItem="yE1-mG-fvn" secondAttribute="leading" id="TuU-80-8Iu"/>
+                                                <constraint firstItem="tce-MT-41L" firstAttribute="centerY" secondItem="gnD-9m-qLY" secondAttribute="centerY" id="oCG-NM-PwZ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="tce-MT-41L" secondAttribute="trailing" id="xTd-ku-4hY"/>
+                                                <constraint firstItem="yE1-mG-fvn" firstAttribute="centerY" secondItem="gnD-9m-qLY" secondAttribute="centerY" id="zRU-dn-CIV"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.48627450979999998" green="0.29803921570000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
@@ -48,15 +60,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Minigames" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94c-ZL-vh2">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select Minigames" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94c-ZL-vh2">
                                                     <rect key="frame" x="8" y="0.0" width="329" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="94c-ZL-vh2" firstAttribute="centerY" secondItem="jaV-0V-9ly" secondAttribute="centerY" id="fxo-ZZ-sTO"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.48627450979999998" green="0.29803921570000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="94c-ZL-vh2" firstAttribute="leading" secondItem="88G-Ce-6Pn" secondAttribute="leading" constant="8" id="h7I-bB-0kW"/>
+                                        </constraints>
                                         <connections>
                                             <segue destination="qp1-7Y-vlN" kind="show" id="ojs-rn-Ct8"/>
                                         </connections>
@@ -68,22 +89,42 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Unw-eC-Vv5">
-                                                    <rect key="frame" x="290" y="5" width="118" height="31"/>
+                                                <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Unw-eC-Vv5">
+                                                    <rect key="frame" x="290" y="5" width="126" height="31"/>
                                                     <color key="tintColor" red="0.48627450979999998" green="0.29803921570000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="minimumTrackTintColor" red="0.92549019610000005" green="0.54901960780000003" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="maximumTrackTintColor" red="0.92549019610000005" green="0.54901960780000003" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="dKk-xk-Q5P"/>
+                                                    </constraints>
+                                                    <color key="minimumTrackTintColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="maximumTrackTintColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="sliderSlid:" destination="wS5-EI-md3" eventType="valueChanged" id="6Mn-g9-6mX"/>
                                                     </connections>
                                                 </slider>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Speed: Medium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THj-dK-Pyg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Game Speed: Medium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THj-dK-Pyg">
                                                     <rect key="frame" x="8" y="0.0" width="276" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Unw-eC-Vv5" secondAttribute="trailing" id="JK9-ua-V4Y"/>
+                                                <constraint firstItem="Unw-eC-Vv5" firstAttribute="centerY" secondItem="RbF-Pb-lv1" secondAttribute="centerY" id="VUW-pe-JvU"/>
+                                                <constraint firstItem="THj-dK-Pyg" firstAttribute="centerY" secondItem="RbF-Pb-lv1" secondAttribute="centerY" id="ZX0-Qj-fB8"/>
+                                                <constraint firstItem="Unw-eC-Vv5" firstAttribute="leading" secondItem="RbF-Pb-lv1" secondAttribute="leadingMargin" constant="-200" id="ery-kv-Xfx"/>
+                                                <constraint firstItem="Unw-eC-Vv5" firstAttribute="leading" secondItem="THj-dK-Pyg" secondAttribute="trailing" constant="8" id="g2j-ml-vaL"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="THj-dK-Pyg" secondAttribute="leading" id="tjG-s3-bMS"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="ery-kv-Xfx"/>
+                                                    <exclude reference="g2j-ml-vaL"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.48627450979999998" green="0.29803921570000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
@@ -94,20 +135,38 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points to Win Game: 25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oc2-Da-i4d">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Points to Win Game: 25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oc2-Da-i4d">
                                                     <rect key="frame" x="8" y="0.0" width="280" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                    </variation>
                                                 </label>
-                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minimumValue="5" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="VfM-vO-lZc">
-                                                    <rect key="frame" x="312" y="7" width="94" height="29"/>
+                                                <stepper opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minimumValue="5" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="VfM-vO-lZc">
+                                                    <rect key="frame" x="312" y="8" width="94" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="94" id="4H6-jN-v7G"/>
+                                                    </constraints>
                                                     <color key="tintColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="pointStepperClicked:" destination="wS5-EI-md3" eventType="valueChanged" id="LAo-tf-XXZ"/>
                                                     </connections>
                                                 </stepper>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Oc2-Da-i4d" firstAttribute="centerY" secondItem="ctS-6M-QOW" secondAttribute="centerY" id="1Y4-Z1-RGV"/>
+                                                <constraint firstItem="VfM-vO-lZc" firstAttribute="centerY" secondItem="ctS-6M-QOW" secondAttribute="centerY" id="3dV-hT-TMI"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="Oc2-Da-i4d" secondAttribute="leading" id="m8X-a6-Kje"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VfM-vO-lZc" secondAttribute="trailing" id="qjQ-85-zfO"/>
+                                                <constraint firstItem="VfM-vO-lZc" firstAttribute="leading" secondItem="Oc2-Da-i4d" secondAttribute="trailing" priority="250" constant="24" id="rcq-LU-618"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="rcq-LU-618"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.48627450979999998" green="0.29803921570000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
@@ -118,13 +177,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rounds per Minigame: 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0y-IV-2fq">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rounds/Minigame: 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0y-IV-2fq">
                                                     <rect key="frame" x="8" y="0.0" width="280" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                    </variation>
                                                 </label>
-                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="s4P-zw-pqu">
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="s4P-zw-pqu">
                                                     <rect key="frame" x="312" y="7" width="94" height="29"/>
                                                     <color key="tintColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
@@ -133,6 +195,18 @@
                                                     </connections>
                                                 </stepper>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="s4P-zw-pqu" firstAttribute="centerY" secondItem="VFD-gg-tgF" secondAttribute="centerY" id="Vxn-xt-JVp"/>
+                                                <constraint firstItem="N0y-IV-2fq" firstAttribute="centerY" secondItem="VFD-gg-tgF" secondAttribute="centerY" id="fO4-rh-FRG"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="N0y-IV-2fq" secondAttribute="leading" id="fcc-9W-D1p"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="s4P-zw-pqu" secondAttribute="trailing" id="jDo-IL-h8H"/>
+                                                <constraint firstItem="s4P-zw-pqu" firstAttribute="leading" secondItem="N0y-IV-2fq" secondAttribute="trailing" constant="24" id="ok7-kv-6pD"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="ok7-kv-6pD"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.48627450979999998" green="0.29803921570000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
@@ -147,13 +221,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaG-Nc-fL0">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Start Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaG-Nc-fL0">
                                                     <rect key="frame" x="8" y="0.0" width="398" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
                                                     <color key="textColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MaG-Nc-fL0" firstAttribute="centerY" secondItem="tES-nT-45o" secondAttribute="centerY" id="4jt-xc-CR6"/>
+                                                <constraint firstItem="MaG-Nc-fL0" firstAttribute="centerX" secondItem="tES-nT-45o" secondAttribute="centerX" id="9z4-eb-Xbo"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.48627450979999998" green="0.29803921570000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
