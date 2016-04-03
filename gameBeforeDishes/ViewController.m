@@ -31,7 +31,7 @@ NSDictionary* miniGameList;
     self.navigationController.navigationBarHidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
     //_secondTapButton.transform =
-    [_secondTapButton setTransform:CGAffineTransformMakeRotation(-M_PI)];
+    //[_secondTapButton setTransform:CGAffineTransformMakeRotation(-M_PI)];
   
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"namesOfPlayers"] == NULL){
         
