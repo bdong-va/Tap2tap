@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BF7BFB4D1C52CB6A0012B29D"
-               BuildableName = "gameBeforeDishes.app"
-               BlueprintName = "gameBeforeDishes"
-               ReferencedContainer = "container:gameBeforeDishes.xcodeproj">
+               BuildableName = "Tap2Tap.app"
+               BlueprintName = "Tap2Tap"
+               ReferencedContainer = "container:Tap2Tap.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BF7BFB691C52CB6B0012B29D"
-               BuildableName = "gameBeforeDishesTests.xctest"
-               BlueprintName = "gameBeforeDishesTests"
-               ReferencedContainer = "container:gameBeforeDishes.xcodeproj">
+               BuildableName = "Tap2Tap.xctest"
+               BlueprintName = "Tap2TapTests"
+               ReferencedContainer = "container:Tap2Tap.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BF7BFB741C52CB6B0012B29D"
-               BuildableName = "gameBeforeDishesUITests.xctest"
-               BlueprintName = "gameBeforeDishesUITests"
-               ReferencedContainer = "container:gameBeforeDishes.xcodeproj">
+               BuildableName = "Tap2Tap.xctest"
+               BlueprintName = "Tap2TapUITests"
+               ReferencedContainer = "container:Tap2Tap.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF7BFB4D1C52CB6A0012B29D"
-            BuildableName = "gameBeforeDishes.app"
-            BlueprintName = "gameBeforeDishes"
-            ReferencedContainer = "container:gameBeforeDishes.xcodeproj">
+            BuildableName = "Tap2Tap.app"
+            BlueprintName = "Tap2Tap"
+            ReferencedContainer = "container:Tap2Tap.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF7BFB4D1C52CB6A0012B29D"
-            BuildableName = "gameBeforeDishes.app"
-            BlueprintName = "gameBeforeDishes"
-            ReferencedContainer = "container:gameBeforeDishes.xcodeproj">
+            BuildableName = "Tap2Tap.app"
+            BlueprintName = "Tap2Tap"
+            ReferencedContainer = "container:Tap2Tap.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF7BFB4D1C52CB6A0012B29D"
-            BuildableName = "gameBeforeDishes.app"
-            BlueprintName = "gameBeforeDishes"
-            ReferencedContainer = "container:gameBeforeDishes.xcodeproj">
+            BuildableName = "Tap2Tap.app"
+            BlueprintName = "Tap2Tap"
+            ReferencedContainer = "container:Tap2Tap.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
