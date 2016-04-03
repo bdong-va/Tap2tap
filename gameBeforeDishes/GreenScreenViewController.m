@@ -12,7 +12,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    super.gameInstruction = @"Click button when it turns GREEN!";
+    super.gameInstruction = @"Tap when it turns GREEN!";
     [self startGame];
 }
 
