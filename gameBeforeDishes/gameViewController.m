@@ -8,7 +8,6 @@
 
 #import "gameViewController.h"
 #import "gameConst.h"
-#import "winViewController.h"
 
 UIColor* winColor;
 UIColor* lostColor;
