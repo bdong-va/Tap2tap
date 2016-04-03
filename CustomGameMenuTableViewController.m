@@ -56,6 +56,15 @@
     
     _pointStepper.value = [[NSUserDefaults standardUserDefaults] integerForKey:@"maxPoints"];
     
+    _roundsStepper.value = [[NSUserDefaults standardUserDefaults] integerForKey:@"roundsPerMiniGame"];
+
+    NSInteger i = [[NSUserDefaults standardUserDefaults] integerForKey:@"roundsPerMiniGame"];
+    
+    _roundsPerMingameLabel.text = [NSMutableString stringWithFormat:@"Rounds/Minigame: %ld", (NSInteger) i];
+    
+
+    
+    
     [self pointStepperClicked:_pointStepper];
     
     // styling status bar
@@ -108,7 +117,7 @@
     [[NSUserDefaults standardUserDefaults] setInteger:(NSInteger)_pointStepper.value forKey:@"maxPoints"];
 }
 - (IBAction)roundsPerMiniStepper:(id)sender {
-    _roundsPerMingameLabel.text = [NSMutableString stringWithFormat:@"Rounds per Minigame: %ld", (NSInteger) _roundsStepper.value];
+    _roundsPerMingameLabel.text = [NSMutableString stringWithFormat:@"Rounds/Minigame: %ld", (NSInteger) _roundsStepper.value];
     
     [[NSUserDefaults standardUserDefaults] setInteger:(NSInteger)_roundsStepper.value forKey:@"roundsPerMiniGame"];
 }
