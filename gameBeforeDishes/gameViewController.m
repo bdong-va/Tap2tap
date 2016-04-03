@@ -8,6 +8,7 @@
 
 #import "gameViewController.h"
 #import "gameConst.h"
+#import "winViewController.h"
 
 UIColor* winColor;
 UIColor* lostColor;
@@ -18,19 +19,23 @@ NSMutableArray* gameList;
 NSMutableArray* unplayedGameList;
 int currentGamePlayed;
 int gameRoundsPerMiniGame;
+int currentHighScore;
 int totalScoreLimit;
 bool buttonLock;
 bool randomGame;
+bool gameEnd;
 
 @implementation gameViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    gameEnd = false;
     currentGamePlayed = 0;
     gameRoundsPerMiniGame = [[NSUserDefaults standardUserDefaults] integerForKey:@"roundsPerMiniGame"];
     totalScoreLimit = [[NSUserDefaults standardUserDefaults] integerForKey:@"maxPoints"];
     randomGame = [[NSUserDefaults standardUserDefaults] boolForKey:@"shuffleGameOrder"];
     buttonLock = false;
+    _winImage.hidden = true;
     constString = [[gameConst alloc] init];
     self.navigationController.navigationBar.hidden = YES;
     self.navigationController.toolbarHidden = YES;
@@ -52,6 +57,11 @@ bool randomGame;
         {
             [gameList removeObject:[constString.gameNameAndID objectForKey:key]];
         }
+    }
+    // empty check
+    if (gameList.count == 0)
+    {
+        gameList = [NSMutableArray arrayWithArray:[constString.gameNameAndID allValues]];
     }
     //shuffle game if necessary
     if (randomGame)
@@ -124,7 +134,6 @@ bool randomGame;
                                 [newController didMoveToParentViewController:self];
                                 self.currentVC = newController;
                                 for (UIButton *button  in _buttonList) {
-                                    //TODO set back to button's name
                                     [button setTitle:[_currentVC getGameInstruction] forState:UIControlStateNormal];
                                     [button setBackgroundColor:normalColor];
                                 }
@@ -166,15 +175,17 @@ bool randomGame;
 
 -(void)resetButtonStatus
 {
-    buttonLock = false;
-    [_currentVC resetGame];
-    [self UpdateGameStatus];
-    for (UIButton *button  in _buttonList) {
-            //TODO set back to button's name
+    if (!gameEnd)
+    {
+        buttonLock = false;
+        [_currentVC resetGame];
+        [self UpdateGameStatus];
+        [self checkAnyoneWin];
+        for (UIButton *button  in _buttonList) {
             [button setTitle:[_currentVC getGameInstruction] forState:UIControlStateNormal];
             [button setBackgroundColor:normalColor];
+        }
     }
-
 }
 
 -(void)updateScoreLabels
@@ -225,5 +236,55 @@ bool randomGame;
         [self SwitchControllers];
     }
 
+}
+
+-(void)checkAnyoneWin
+{
+
+    if ([_scoreList[0] integerValue] >= totalScoreLimit || [_scoreList[1] integerValue] >= totalScoreLimit)
+    {
+        NSLog(@"it passed!");
+        //pause everything
+        gameEnd= true;
+        buttonLock = true;
+        [self.currentVC pauseGame];
+        for (UIButton *button  in _buttonList) {
+            [button setTitle:[_currentVC getGameInstruction] forState:UIControlStateNormal];
+            [button setBackgroundColor:normalColor];
+        }
+        //show winning page.
+        [self showViewA];
+        _winImage.hidden = false;
+        if ([_scoreList[0] integerValue]>(int)[_scoreList[1] integerValue]) // player 1 win
+        {
+            _winImage.transform =CGAffineTransformMakeRotation(M_PI);
+            [NSTimer scheduledTimerWithTimeInterval:1.0
+                                             target:self
+                                           selector:@selector(player1Win)
+                                           userInfo:nil
+                                            repeats:NO];
+        }
+        else
+        {
+            [NSTimer scheduledTimerWithTimeInterval:1.0
+                                             target:self
+                                           selector:@selector(player2Win)
+                                           userInfo:nil
+                                            repeats:NO];
+        }
+
+    }
+}
+
+-(void)player1Win
+{
+    [_button2 setTitle:@"Next Time!" forState:UIControlStateNormal];
+    [_button1 setTitle:@"You Win!" forState:UIControlStateNormal];
+}
+
+-(void)player2Win
+{
+    [_button1 setTitle:@"Next Time!" forState:UIControlStateNormal];
+    [_button2 setTitle:@"You Win!" forState:UIControlStateNormal];
 }
 @end

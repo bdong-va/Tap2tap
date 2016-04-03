@@ -31,6 +31,7 @@
 @property NSMutableArray* buttonList;
 @property NSMutableArray* scoreLabelList;
 @property NSMutableArray* scoreList;
+@property IBOutlet UIImageView* winImage;
 
 @property IBOutlet UIButton* backButton;
 

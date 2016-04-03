@@ -92,6 +92,9 @@
                                     <action selector="popBackMenu:" destination="qaE-FI-Mdo" eventType="touchUpInside" id="0W2-XG-w25"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Win.png" translatesAutoresizingMaskIntoConstraints="NO" id="q3Y-js-lN1">
+                                <rect key="frame" x="0.0" y="184" width="414" height="368"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -156,6 +159,7 @@
                         <outlet property="button4" destination="4QU-Uk-9cL" id="9wd-0D-giF"/>
                         <outlet property="containerViewA" destination="u4p-mG-y6I" id="3k1-JI-4ma"/>
                         <outlet property="containerViewB" destination="19O-ya-Ktn" id="MSA-c3-QXn"/>
+                        <outlet property="winImage" destination="q3Y-js-lN1" id="H7o-SZ-IO9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ZE-xc-jvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -315,7 +319,7 @@
         <!--View Controller-->
         <scene sceneID="R7m-ey-YxL">
             <objects>
-                <viewController id="NaP-EE-FsM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gameOver" id="NaP-EE-FsM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yWY-Hx-onI"/>
                         <viewControllerLayoutGuide type="bottom" id="4tL-kG-qug"/>
@@ -604,6 +608,7 @@
     </scenes>
     <resources>
         <image name="Kanizsa_triangle.png" width="2000" height="2133"/>
+        <image name="Win.png" width="313" height="232"/>
         <image name="skyline.png" width="770" height="182"/>
         <image name="skylineU.png" width="770" height="182"/>
     </resources>
