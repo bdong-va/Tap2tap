@@ -26,7 +26,7 @@
     gameSpeedValue = [[NSUserDefaults standardUserDefaults] floatForKey:@"gameSpeed"];
     gameSpeedValue = -4*gameSpeedValue;
     super.timerValue = 5 + gameSpeedValue;
-    super.gameInstruction = @"Is the Capital Correct?";
+    super.gameInstruction = @"Match the capital and Country";
     
     
     super.QuestionUp.textAlignment = NSTextAlignmentCenter;

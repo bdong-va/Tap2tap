@@ -26,7 +26,7 @@
     gameSpeedValue = [[NSUserDefaults standardUserDefaults] floatForKey:@"gameSpeed"];
     gameSpeedValue = -4*gameSpeedValue;
     super.timerValue = 5 + gameSpeedValue;
-    super.gameInstruction = @"Is This Equation Correct?";
+    super.gameInstruction = @"Is this correct?";
     
     
     super.QuestionUp.textAlignment = NSTextAlignmentCenter;

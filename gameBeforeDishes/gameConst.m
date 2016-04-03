@@ -24,11 +24,12 @@
                            @"BLUE": [self convertColorToString: [UIColor blueColor]],
                            @"RED": [self convertColorToString: [UIColor redColor]],
                            @"BLACK": [self convertColorToString: [UIColor blackColor]],
-                           @"YELLOW": [self convertColorToString: [UIColor yellowColor]],
+                           /*@"YELLOW": [self convertColorToString: [UIColor yellowColor]],*/
+                           //removed these colours as they conflict with the background
                            @"PURPLE": [self convertColorToString: [UIColor purpleColor]],
                            @"ORANGE": [self convertColorToString: [UIColor orangeColor]],
                            @"GRAY": [self convertColorToString: [UIColor grayColor]],
-                           @"WHITE": [self convertColorToString: [UIColor whiteColor]],
+                           /*@"WHITE": [self convertColorToString: [UIColor whiteColor]],*/
                            @"BROWN": [self convertColorToString: [UIColor brownColor]],
                            @"CYAN": [self convertColorToString: [UIColor cyanColor]],
                            @"GREEN": [self convertColorToString: [UIColor greenColor]],
