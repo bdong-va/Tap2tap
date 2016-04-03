@@ -29,7 +29,6 @@
 		BFB93F151C8CA10E00B69F71 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB93F141C8CA10E00B69F71 /* QuizViewController.m */; };
 		BFB93F181C8CA13400B69F71 /* gameConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB93F171C8CA13400B69F71 /* gameConst.m */; };
 		BFCA18B71C9C9F6700B8F8F0 /* GreenScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCA18B61C9C9F6700B8F8F0 /* GreenScreenViewController.m */; };
-		BFCA37D01CAF1CD2009979F8 /* Kanizsa_triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = BFCA37CF1CAF1CD2009979F8 /* Kanizsa_triangle.png */; };
 		D32899FF1C952A9E005A3177 /* PointChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D32899FE1C952A9E005A3177 /* PointChooserViewController.m */; };
 		D331038D1C98840E007D1DC8 /* labelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D331038C1C98840E007D1DC8 /* labelCell.xib */; };
 		D33103901C9884E2007D1DC8 /* textfieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D331038F1C9884E2007D1DC8 /* textfieldTableViewCell.m */; };
@@ -95,7 +94,6 @@
 		BFB93F171C8CA13400B69F71 /* gameConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameConst.m; sourceTree = "<group>"; };
 		BFCA18B51C9C9F6700B8F8F0 /* GreenScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenScreenViewController.h; sourceTree = "<group>"; };
 		BFCA18B61C9C9F6700B8F8F0 /* GreenScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenScreenViewController.m; sourceTree = "<group>"; };
-		BFCA37CF1CAF1CD2009979F8 /* Kanizsa_triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Kanizsa_triangle.png; path = ../../../Downloads/Kanizsa_triangle.png; sourceTree = "<group>"; };
 		D32899FD1C952A9E005A3177 /* PointChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointChooserViewController.h; sourceTree = "<group>"; };
 		D32899FE1C952A9E005A3177 /* PointChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointChooserViewController.m; sourceTree = "<group>"; };
 		D331038C1C98840E007D1DC8 /* labelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = labelCell.xib; path = ../labelCell.xib; sourceTree = "<group>"; };
@@ -164,7 +162,6 @@
 				D331038F1C9884E2007D1DC8 /* textfieldTableViewCell.m */,
 				BF1A17EA1CA0CD740032DD73 /* skyline.png */,
 				BF1A17EC1CA0CE110032DD73 /* skylineU.png */,
-				BFCA37CF1CAF1CD2009979F8 /* Kanizsa_triangle.png */,
 				BFB93F161C8CA13400B69F71 /* gameConst.h */,
 				BFB93F171C8CA13400B69F71 /* gameConst.m */,
 				BFB93F101C8CA10300B69F71 /* gameViewController.h */,
@@ -342,7 +339,6 @@
 				BFA5D1711C95B37F006822A7 /* Purchase.storyboard in Resources */,
 				BF7BFB611C52CB6B0012B29D /* Assets.xcassets in Resources */,
 				D331038D1C98840E007D1DC8 /* labelCell.xib in Resources */,
-				BFCA37D01CAF1CD2009979F8 /* Kanizsa_triangle.png in Resources */,
 				BF1A17EB1CA0CD740032DD73 /* skyline.png in Resources */,
 				BF1A17ED1CA0CE110032DD73 /* skylineU.png in Resources */,
 				BF7BFB5C1C52CB6B0012B29D /* Main.storyboard in Resources */,
