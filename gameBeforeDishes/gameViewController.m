@@ -31,6 +31,7 @@ bool randomGame;
     totalScoreLimit = [[NSUserDefaults standardUserDefaults] integerForKey:@"maxPoints"];
     randomGame = [[NSUserDefaults standardUserDefaults] boolForKey:@"shuffleGameOrder"];
     buttonLock = false;
+    constString = [[gameConst alloc] init];
     self.navigationController.navigationBar.hidden = YES;
     self.navigationController.toolbarHidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
@@ -42,7 +43,22 @@ bool randomGame;
     self.scoreList[2]=@0;
     self.scoreList[3]=@0;
     //setting up games.
-    gameList = [NSMutableArray arrayWithObjects:@"capitalAndCountry", @"greenScreenGame", @"CDGVC", @"colourGame", @"alphabetGame", @"mathGame", nil];
+    gameList = [NSMutableArray arrayWithArray:[constString.gameNameAndID allValues]];
+    //remove games deselected.
+    for (id key in constString.gameNameAndID)
+    {
+        bool gameSelected = [[NSUserDefaults standardUserDefaults] boolForKey:key];
+        if (!gameSelected)
+        {
+            [gameList removeObject:[constString.gameNameAndID objectForKey:key]];
+        }
+    }
+    //shuffle game if necessary
+    if (randomGame)
+    {
+        for (NSUInteger i = gameList.count; i > 1; i--) [gameList exchangeObjectAtIndex:i - 1 withObjectAtIndex:arc4random_uniform((u_int32_t)i)];
+    }
+    
     unplayedGameList = [[NSMutableArray alloc] initWithArray:gameList];
     
     [self updateScoreLabels];
@@ -50,7 +66,6 @@ bool randomGame;
     winColor = [UIColor colorWithRed:0.38 green:1 blue:0.412 alpha:1];
     lostColor= [UIColor colorWithRed:1 green:0.412 blue:0.38 alpha:1];
     normalColor = [UIColor colorWithRed:0.992 green:0.992 blue:0.800 alpha:1.0];
-    constString = [[gameConst alloc] init];
     _button1.transform = CGAffineTransformMakeRotation(M_PI);
     _ScoreLabel1.transform = CGAffineTransformMakeRotation(M_PI);
     _button3.hidden = true;
@@ -60,6 +75,7 @@ bool randomGame;
     
     [self SwitchControllers];
     [self resetButtonStatus];
+    currentGamePlayed = 0;
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -204,7 +220,7 @@ bool randomGame;
 - (void)UpdateGameStatus
 {
     currentGamePlayed++;
-    if (currentGamePlayed > gameRoundsPerMiniGame) {
+    if (currentGamePlayed >= gameRoundsPerMiniGame) {
         currentGamePlayed = 0;
         [self SwitchControllers];
     }

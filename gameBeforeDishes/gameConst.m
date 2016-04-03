@@ -75,6 +75,14 @@
                            @"ABCDEFGHIJKLMNOPQRSTUVWYXZ":@"ABCDEFGHIJKLMNOPQRSTUVW>yx<Z",
                            @"ABCDEFGHIJKLMNOPQRSTUWVXYZ":@"ABCDEFGHIJKLMNOPQRSTU>wv<XYZ",
                            };
+        self.gameNameAndID = @{
+                               @"Capital&Country":@"capitalAndCountry",
+                               @"Green Screen":@"greenScreenGame",
+                               @"Count Down":@"CDGVC",
+                               @"Match Color":@"colourGame",
+                               @"Alphabet":@"alphabetGame",
+                               @"Math":@"mathGame",
+                               };
     }
     
     return self;

@@ -7,14 +7,18 @@
 //
 
 #import "ViewController.h"
+#import "gameConst.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
-
+{
+    gameConst* games;
+}
 NSInteger numberOfPlayers;
+
 
 BOOL shuffleGameOrder;
 NSArray* listOfSelectedMiniGames;
@@ -28,22 +32,27 @@ NSDictionary* miniGameList;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    games = [[gameConst alloc] init];
     self.navigationController.navigationBarHidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
     //_secondTapButton.transform =
     [_secondTapButton setTransform:CGAffineTransformMakeRotation(-M_PI)];
-  
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"namesOfPlayers"] == NULL){
-        
+
         numberOfPlayers = 2;
         _namesOfPlayers = [[NSMutableArray alloc] init];
         
-        miniGameList = [[NSDictionary alloc] initWithObjectsAndKeys:
-                        [NSNumber numberWithBool:YES], @"game1",
-                        [NSNumber numberWithBool:YES], @"game2",
-                        [NSNumber numberWithBool:YES], @"game3",
-                        nil];
-        
+        miniGameList = [[NSDictionary alloc] initWithObjects:[[NSArray alloc] initWithObjects:
+                                                          [NSNumber numberWithBool:YES],
+                                                          [NSNumber numberWithBool:YES],
+                                                          [NSNumber numberWithBool:YES],
+                                                          [NSNumber numberWithBool:YES],
+                                                          [NSNumber numberWithBool:YES],
+                                                          [NSNumber numberWithBool:YES],
+                                                          nil] forKeys:[games.gameNameAndID allKeys]];
+    
+    
+    
         
 //        NSNumber *x =[NSNumber numberWithBool:YES];
 //        [miniGameList setValue:x forKey:@"game1"];
@@ -53,7 +62,7 @@ NSDictionary* miniGameList;
         [_namesOfPlayers addObject:@"Player 1"];
         [_namesOfPlayers addObject:@"Player 2"];
         shuffleGameOrder = NO;
-        listOfSelectedMiniGames = @[@"game1", @"game2", @"game3"];
+        listOfSelectedMiniGames = [miniGameList allKeys];
         gameSpeed = 0.5;
         maxPoints = 50;
         roundsPerMiniGame = 3;
@@ -65,8 +74,7 @@ NSDictionary* miniGameList;
         [[NSUserDefaults standardUserDefaults] setFloat:gameSpeed forKey:@"gameSpeed"];
         [[NSUserDefaults standardUserDefaults] setInteger:maxPoints forKey:@"maxPoints"];
         [[NSUserDefaults standardUserDefaults] setInteger:roundsPerMiniGame forKey:@"roundsPerMiniGame"];
-   }
-
+    }
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 

@@ -23,6 +23,7 @@
 @property NSDictionary* capitalAndState;
 @property NSString* correctAlphabet;
 @property NSDictionary* wrongAlphabet;
+@property NSDictionary* gameNameAndID;
 
 - (NSString*)getRandomObjectFromArray:(NSMutableArray*) theArray;
 - (NSString*)getRandomKeyfromDict:(NSDictionary*) theDict;
