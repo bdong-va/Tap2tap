@@ -27,7 +27,7 @@
     gameSpeedValue = [[NSUserDefaults standardUserDefaults] floatForKey:@"gameSpeed"];
     gameSpeedValue = -4*gameSpeedValue;
     super.timerValue = 5 + gameSpeedValue;
-    super.gameInstruction = @"match the words and colours";
+    super.gameInstruction = @"Match the words and colours";
     
     
     super.QuestionUp.textAlignment = NSTextAlignmentCenter;

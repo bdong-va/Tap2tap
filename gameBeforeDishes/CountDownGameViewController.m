@@ -22,7 +22,7 @@ float x;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self startGame];
-    super.gameInstruction = @"Tap as soon as countdown gets to zero!";
+    super.gameInstruction = @"Tap when it reaches zero!";
     //[super.threadProgressView1 setTransform:CGAffineTransformMakeRotation(-M_PI)];
     UILabel* lab = [super QuestionDown];
     [lab setTransform:CGAffineTransformMakeRotation(-M_PI)];
