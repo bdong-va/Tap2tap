@@ -715,8 +715,8 @@
                             <mask key="constraints">
                                 <exclude reference="Cya-i7-yc9"/>
                                 <exclude reference="Lfv-wk-SNz"/>
-                                <exclude reference="QV3-NU-p5C"/>
                                 <exclude reference="Bwl-Vi-si7"/>
+                                <exclude reference="QV3-NU-p5C"/>
                             </mask>
                         </variation>
                     </view>
@@ -960,19 +960,19 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="TO8-P5-uhD"/>
+                                <exclude reference="2WA-Rv-d8A"/>
                                 <exclude reference="6bS-ky-CGc"/>
                                 <exclude reference="9ji-SM-t09"/>
-                                <exclude reference="2WA-Rv-d8A"/>
                                 <exclude reference="FNI-of-wW9"/>
+                                <exclude reference="TO8-P5-uhD"/>
                                 <exclude reference="8l7-x9-b5Q"/>
                                 <exclude reference="Ggg-14-E8Q"/>
                                 <exclude reference="Y9V-Y4-9le"/>
                                 <exclude reference="7Sw-nr-54b"/>
-                                <exclude reference="uCK-zR-8Gq"/>
                                 <exclude reference="8OR-JN-IWf"/>
                                 <exclude reference="UlW-qj-zLU"/>
                                 <exclude reference="hCL-GJ-dfV"/>
+                                <exclude reference="uCK-zR-8Gq"/>
                             </mask>
                         </variation>
                     </view>
