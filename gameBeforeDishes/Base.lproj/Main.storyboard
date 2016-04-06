@@ -70,7 +70,7 @@
                                 <rect key="frame" x="20" y="550" width="374" height="79"/>
                                 <color key="backgroundColor" red="0.48627450979999998" green="0.29803921570000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <state key="normal" title="Unlock More Games!">
+                                <state key="normal" title="How To Play">
                                     <color key="titleColor" red="1" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>

@@ -12,7 +12,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    super.gameInstruction = @"Tap when it turns GREEN!";
+    super.gameInstruction = @"Tap when the screen turns GREEN!";
     [self startGame];
 }
 
@@ -47,7 +47,7 @@
 -(void)turnWhite
 {
     super.GoodTimeToPressButton = false;
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor colorWithRed:0.49019608 green:0.30196078  blue:0.70196078 alpha:1.0];
     [self startGame];
 }
 

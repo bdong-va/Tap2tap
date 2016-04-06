@@ -37,6 +37,7 @@
 		D390425C1C879D6C00474670 /* CustomGameMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D390425B1C879D6C00474670 /* CustomGameMenuTableViewController.m */; };
 		D39042621C87AA5400474670 /* PlayersNamesUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D39042611C87AA5400474670 /* PlayersNamesUITableViewController.m */; };
 		D3925DDC1CB3180D0049F23E /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = D3925DDB1CB3180D0049F23E /* Icons */; };
+		D3AC271F1CB57E1300DE5AE4 /* rightAnswerImg.PNG in Resources */ = {isa = PBXBuildFile; fileRef = D3AC271E1CB57E1300DE5AE4 /* rightAnswerImg.PNG */; };
 		D3B291BC1C9EFC02001456F4 /* CountDownGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B291BB1C9EFC02001456F4 /* CountDownGameViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,7 @@
 		D39042601C87AA5400474670 /* PlayersNamesUITableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayersNamesUITableViewController.h; sourceTree = "<group>"; };
 		D39042611C87AA5400474670 /* PlayersNamesUITableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersNamesUITableViewController.m; sourceTree = "<group>"; };
 		D3925DDB1CB3180D0049F23E /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
+		D3AC271E1CB57E1300DE5AE4 /* rightAnswerImg.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightAnswerImg.PNG; sourceTree = "<group>"; };
 		D3B291BA1C9EFC02001456F4 /* CountDownGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownGameViewController.h; sourceTree = "<group>"; };
 		D3B291BB1C9EFC02001456F4 /* CountDownGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownGameViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +168,7 @@
 				D331038F1C9884E2007D1DC8 /* textfieldTableViewCell.m */,
 				BFCA37D11CB180CF009979F8 /* Win.png */,
 				BF1A17EA1CA0CD740032DD73 /* skyline.png */,
+				D3AC271E1CB57E1300DE5AE4 /* rightAnswerImg.PNG */,
 				BF1A17EC1CA0CE110032DD73 /* skylineU.png */,
 				BFB93F161C8CA13400B69F71 /* gameConst.h */,
 				BFB93F171C8CA13400B69F71 /* gameConst.m */,
@@ -348,6 +351,7 @@
 				D331038D1C98840E007D1DC8 /* labelCell.xib in Resources */,
 				BF1A17EB1CA0CD740032DD73 /* skyline.png in Resources */,
 				BF1A17ED1CA0CE110032DD73 /* skylineU.png in Resources */,
+				D3AC271F1CB57E1300DE5AE4 /* rightAnswerImg.PNG in Resources */,
 				BF7BFB5C1C52CB6B0012B29D /* Main.storyboard in Resources */,
 				BFCA37D21CB180CF009979F8 /* Win.png in Resources */,
 				BFA5D16F1C95B35F006822A7 /* Setting.storyboard in Resources */,

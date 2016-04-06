@@ -72,7 +72,7 @@ bool gameEnd;
     
     [self updateScoreLabels];
     
-    winColor = [UIColor colorWithRed:0.38 green:1 blue:0.412 alpha:1];
+    winColor = [UIColor greenColor];
     lostColor= [UIColor colorWithRed:1 green:0.412 blue:0.38 alpha:1];
     normalColor = [UIColor colorWithRed:0.992 green:0.992 blue:0.800 alpha:1.0];
     _button1.transform = CGAffineTransformMakeRotation(M_PI);
