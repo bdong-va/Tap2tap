@@ -40,11 +40,11 @@ NSArray* listOfGames;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"gameNameCells" forIndexPath:indexPath];
-    
+    UIFont* heavyFont = [UIFont boldSystemFontOfSize:20];
     // Configure the cell...
     cell.textLabel.text = [listOfGames objectAtIndex:indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.textLabel.font = [UIFont systemFontOfSize:20];
+    cell.textLabel.font = heavyFont;
     cell.textLabel.textColor = [UIColor colorWithRed:0.992 green:0.992 blue:0.800 alpha:1.0];
     
     //

@@ -28,12 +28,16 @@ NSDictionary* defaultUserDefaults;
 NSInteger roundsPerMiniGame;
 NSDictionary* miniGameList;
 
-
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     games = [[gameConst alloc] init];
     self.navigationController.navigationBarHidden = YES;
+    //NSLog(@"viewdidload on main VC");
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"namesOfPlayers"] == NULL){
 
         numberOfPlayers = 2;
