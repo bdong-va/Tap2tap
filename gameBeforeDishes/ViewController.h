@@ -11,6 +11,5 @@
 @interface ViewController : UIViewController
 @property NSMutableArray* namesOfPlayers;
 @property (weak, nonatomic) IBOutlet UILabel *secondTapButton;
-
 @end
 

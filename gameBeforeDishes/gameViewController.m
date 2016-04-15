@@ -17,10 +17,10 @@ gameConst* constString;
 NSMutableArray* gameList;
 NSMutableArray* unplayedGameList;
 int currentGamePlayed;
-int gameRoundsPerMiniGame;
+NSInteger gameRoundsPerMiniGame;
 int currentHighScore;
-int totalScoreLimit;
-bool buttonLock;
+NSInteger totalScoreLimit;
+bool buttonLocked;
 bool randomGame;
 bool gameEnd;
 
@@ -28,17 +28,30 @@ bool gameEnd;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initView];
+    [self setupGameList];
+    [self updateScoreLabels];
+    [self showViewB];
+    [self SwitchControllers];
+    [self resetButtonStatus];
+}
+
+- (void) initView
+{
     gameEnd = false;
     currentGamePlayed = 0;
     gameRoundsPerMiniGame = [[NSUserDefaults standardUserDefaults] integerForKey:@"roundsPerMiniGame"];
     totalScoreLimit = [[NSUserDefaults standardUserDefaults] integerForKey:@"maxPoints"];
     randomGame = [[NSUserDefaults standardUserDefaults] boolForKey:@"shuffleGameOrder"];
-    buttonLock = false;
+    buttonLocked = false;
     _winImage.hidden = true;
     constString = [[gameConst alloc] init];
-    self.navigationController.navigationBar.hidden = YES;
-    self.navigationController.toolbarHidden = YES;
-    // Do any additional setup after loading the view, typically from a nib.
+    winColor = [UIColor greenColor];
+    lostColor= [UIColor colorWithRed:1 green:0.412 blue:0.38 alpha:1];
+    normalColor = [UIColor colorWithRed:0.992 green:0.992 blue:0.800 alpha:1.0];
+    _button3.hidden = true;
+    _button4.hidden = true;
+    self.currentVC = self.childViewControllers.lastObject;
     self.buttonList = [NSMutableArray arrayWithObjects:_button1,_button2,_button3,_button4, nil];
     self.scoreLabelList = [NSMutableArray arrayWithObjects:_ScoreLabel1,_ScoreLabel2,_ScoreLabel3,_ScoreLabel4, nil];
     self.scoreList = [NSMutableArray arrayWithCapacity:4];
@@ -46,6 +59,18 @@ bool gameEnd;
     self.scoreList[1]=@0;
     self.scoreList[2]=@0;
     self.scoreList[3]=@0;
+    
+    // reverse buttons/scores on top.
+    _button1.transform = CGAffineTransformMakeRotation(M_PI);
+    _ScoreLabel1.transform = CGAffineTransformMakeRotation(M_PI);
+    
+    // set up navigator attribution.
+    self.navigationController.navigationBar.hidden = YES;
+    self.navigationController.toolbarHidden = YES;
+}
+
+- (void) setupGameList
+{
     //setting up games.
     gameList = [NSMutableArray arrayWithArray:[constString.gameNameAndID allValues]];
     //remove games deselected.
@@ -69,36 +94,13 @@ bool gameEnd;
     }
     
     unplayedGameList = [[NSMutableArray alloc] initWithArray:gameList];
-    
-    [self updateScoreLabels];
-    
-    winColor = [UIColor greenColor];
-    lostColor= [UIColor colorWithRed:1 green:0.412 blue:0.38 alpha:1];
-    normalColor = [UIColor colorWithRed:0.992 green:0.992 blue:0.800 alpha:1.0];
-    _button1.transform = CGAffineTransformMakeRotation(M_PI);
-    _ScoreLabel1.transform = CGAffineTransformMakeRotation(M_PI);
-    _button3.hidden = true;
-    _button4.hidden = true;
-    [self showViewB];
-    self.currentVC = self.childViewControllers.lastObject;
-    
-    [self SwitchControllers];
-    [self resetButtonStatus];
-    currentGamePlayed = 0;
-}
 
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSString * segueName = segue.identifier;
-    if ([segueName isEqualToString: @"quiz_embed"]) {
-        _currentVC = (EmbedGameViewController *) [segue destinationViewController];
-    }
 }
 
 -(IBAction)pressPlayerButton:(id)sender
 {
-    if (buttonLock == false) {
-        buttonLock = true;
+    if (buttonLocked == false) {
+        buttonLocked = true;
         [self setButtonsStatus:sender isItWin:[_currentVC isGoodTime]];
         [NSTimer scheduledTimerWithTimeInterval:2.0
                                          target:self
@@ -176,7 +178,7 @@ bool gameEnd;
 {
     if (!gameEnd)
     {
-        buttonLock = false;
+        buttonLocked = false;
         [_currentVC resetGame];
         [self UpdateGameStatus];
         [self checkAnyoneWin];
@@ -245,7 +247,7 @@ bool gameEnd;
         NSLog(@"it passed!");
         //pause everything
         gameEnd= true;
-        buttonLock = true;
+        buttonLocked = true;
         [self.currentVC pauseGame];
         for (UIButton *button  in _buttonList) {
             [button setTitle:[_currentVC getGameInstruction] forState:UIControlStateNormal];

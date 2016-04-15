@@ -16,17 +16,16 @@
 @implementation ViewController
 {
     gameConst* games;
+    
+    NSInteger numberOfPlayers;
+    BOOL shuffleGameOrder;
+    NSArray* listOfSelectedMiniGames;
+    float gameSpeed;
+    NSInteger maxPoints;
+    NSDictionary* defaultUserDefaults;
+    NSInteger roundsPerMiniGame;
+    NSDictionary* miniGameList;
 }
-NSInteger numberOfPlayers;
-
-
-BOOL shuffleGameOrder;
-NSArray* listOfSelectedMiniGames;
-float gameSpeed;
-NSInteger maxPoints;
-NSDictionary* defaultUserDefaults;
-NSInteger roundsPerMiniGame;
-NSDictionary* miniGameList;
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:YES animated:animated];
@@ -51,14 +50,6 @@ NSDictionary* miniGameList;
                                                           [NSNumber numberWithBool:YES],
                                                           [NSNumber numberWithBool:YES],
                                                           nil] forKeys:[games.gameNameAndID allKeys]];
-    
-    
-    
-        
-//        NSNumber *x =[NSNumber numberWithBool:YES];
-//        [miniGameList setValue:x forKey:@"game1"];
-//        [miniGameList setValue:[NSNumber numberWithBool:YES] forKey:@"game1"];
-//        [miniGameList setValue:[NSNumber numberWithBool:YES] forKey:@"game1"];
 
         [_namesOfPlayers addObject:@"Player 1"];
         [_namesOfPlayers addObject:@"Player 2"];
